@@ -1,1 +1,4 @@
-Welcome to the mulberry wiki!
+- [[Creating Pages]]
+- [[Components]]
+- [[Page Templates]]
+- [[Capabilities]]
