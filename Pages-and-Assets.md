@@ -1,4 +1,4 @@
-# Creating Pages
+# Pages and Assets
 
 The first step in creating a page is creating an entry for it in your
 application's sitemap, located at `sitemap.yml`. This file lets you specify
