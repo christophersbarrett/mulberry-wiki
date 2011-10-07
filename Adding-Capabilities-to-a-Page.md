@@ -1,6 +1,3 @@
-
-# Capabilities
-
 Capabilities describe interactions between components on a page, or between the
 page and a component. For example, a capability might describe how a caption
 component should be updated when a user swipes to a new image in an image
