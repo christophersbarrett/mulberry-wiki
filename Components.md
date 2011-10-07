@@ -1,5 +1,3 @@
-# Components
-
 Pages in Mulberry are displayed using a combination of components as specified by
 the page's template. Each component receives information about the page that is
 being displayed, as well as information about where on the page the component
