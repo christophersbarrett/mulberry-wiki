@@ -94,7 +94,7 @@ your own custom components and capabilities.
 
 Mulberry can create the YAML skeleton for a new template for you:
 
-    mulberry create_template ImageGallery
+    mulberry create_template BasicPageTemplate
 
 This will create a file `ImageGallery.yml` in your project's templates
 directory.
