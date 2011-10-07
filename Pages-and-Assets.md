@@ -4,7 +4,7 @@ The first step in creating a page is creating an entry for it in your
 application's sitemap, located at `sitemap.yml`. This file lets you specify
 the hierarchy of your application.
 
-    - home
+    - home:
       - schedule
       - speakers
       - points-of-interest
