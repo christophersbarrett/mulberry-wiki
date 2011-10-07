@@ -1,4 +1,4 @@
-- [[Creating Pages]]
+- [[Pages and Assets]]
 - [[Components]]
 - [[Page Templates]]
 - [[Capabilities]]
