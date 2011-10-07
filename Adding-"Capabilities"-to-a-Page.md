@@ -1,3 +1,4 @@
+
 # Capabilities
 
 Capabilities describe interactions between components on a page, or between the
