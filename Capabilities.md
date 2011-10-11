@@ -2,7 +2,7 @@ Capabilities describe how two or more components that are present on a page shou
 
 Here is an example of a capability that defines the interaction between an Image Gallery and an Image Caption component:
 
-    "ImageGallery_ImageCaption" : {
+    toura.capability("ImageGallery_ImageCaption", {
       requirements : {
         imageGallery : 'ImageGallery',
         imageCaption : 'ImageCaption'
@@ -16,7 +16,8 @@ Here is an example of a capability that defines the interaction between an Image
         var image = this.node.images[imageIndex];
         this.imageCaption.set('content', image && image.caption || '');
       }
-    }
+    });
+
     
 A capability indicates the components that it requires, and then indicates the function that should run when a component announces an event. In the example above, the capability indicates that it requires an ImageGallery and ImageCaption component, and that the `_setCaption` method defined in the capability's configuration should run when the `onScrollEnd` method of the Image Gallery instance is called.
 
