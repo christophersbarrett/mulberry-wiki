@@ -44,7 +44,7 @@ without confusion.
                 - ImageCaption
         capabilities:
           -
-            name: Gallery_Caption
+            name: ImageGallery_ImageCaption
             components:
               - index:ImageGallery
               - index:ImageCaption
