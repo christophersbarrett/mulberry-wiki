@@ -72,7 +72,7 @@ has a caption, it will be displayed when the associated image is displayed.
 
 Displays the locations associated with a page on a map.
 
-### LocationsList
+### LocationList
 
 Displays the locations associated with a page in a list. If
 the page also has images associated with it, they will be displayed in a
