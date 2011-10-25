@@ -1,4 +1,5 @@
 - [[Pages and Assets]]
 - [[Components]]
 - [[Page Templates]]
+- [[Style]]
 - [[Capabilities]]
