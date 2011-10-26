@@ -1,5 +1,5 @@
 - [[An Overview of the Mulberry Tools]]
-- [[Mulberry Basics]]
+- [[Getting Started]]
 - [[Pages and Assets]]
 - [[Components]]
 - [[Page Templates]]
