@@ -1,4 +1,3 @@
-
 - First upgrade the iphone xcode project (Toura.xcodeproj)
     - Create a new project in /tmp called "Toura" using the PhoneGap template
         - do not use automatic reference counting
@@ -6,7 +5,6 @@
     - cd <mulberry>/lib/project_templates/iOS
     - cp -R Toura/* /tmp/Toura/Toura/
     - Add plugins to project:
-        - delete README file from Plugins group
         - cntrl-click on the Plugins group and then Add Files to Toura...
         - navigate to <mulberry>/lib/project_templates/iOS/Toura/Plugins
         - select all files/directories
@@ -38,7 +36,6 @@
     - rename the "Toura-iPad" group to "Toura"
     - Change the directory that this group is mapped to -- this can be done in "Identity" panel to the far right when the group is selected.
     - Add plugins to project:
-        - delete README file from Plugins group
         - cntrl-click on the Plugins group and then Add Files to Toura-iPad ...
         - navigate to <mulberry>/lib/project_templates/iOS/Toura/Plugins
         - select all files/directories
