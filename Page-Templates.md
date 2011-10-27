@@ -3,11 +3,13 @@ built-in templates, or create your own. To specify a template for a page, add a
 template property to the page's YAML header:
 
     ---
-    title: My Home Page
-    template: Home
+    title: My Page
+    template: default
     ---
 
     My page's content is amazing.
+
+The template name is added as a class on the page's root element, as a hook for styling.
 
 You may want to consider creating different page templates for different device
 types. You can indicate that a page should use different templates for
@@ -15,47 +17,47 @@ different device types by specifying a template object in a page's YAML header,
 rather than a template string:
 
     ---
-    title: My Page
+    title: My Image Page
     template:
-      phone: ImageGalleryPhone
-      tablet: ImageGalleryTablet
+      phone: image-gallery-phone
+      tablet: image-gallery-tablet
     ---
 
-    My page's content is amazing.
+    My images are amazing.
 
 If you specify a template that does not exist, the page will not be
 displayed in your app. If you do not specify a template, then the built-in
-`Default` template will be used.
+`default` template will be used.
 
 ## Built-In Page Templates
 
 Mulberry comes with several built-in page templates. Any of these templates can be
 specified as the template for a page in the page file's YAML header.
 
-### Audios
+### audio-with-images-phone and audio-with-images-tablet
 
 Displays audios associated with a page; selecting an audio plays
 the audio in an audio player. If an audio has an associated caption, it will
 be displayed when the audio is selected. Also displays the page text and
 links to subpages, if any.
 
-### Default
+### default
 
 Displays the page text, a page header image (if specified), and
 links to subpages, if any.
 
-### GridView
+### grid-view
 
 Displays the page text and a grid of links to subpages; a featured image
 should specified in order to be displayed in the grid.
 
-### Home
+### home
 
 Displays the page text and links to subpages. Also includes an
 application-level navigation component, which links to the Search, About, and
 Favorites pages.
 
-### Images
+### images-and-text-phone and images-and-text-tablet
 
 Displays the images associated with a page in a swipeable image gallery;
 selecting an image in the image gallery opens a larger view of the image,
@@ -63,23 +65,23 @@ which can be panned and zoomed. If an image has a caption, it will be
 displayed when the associated image is displayed. This template also displays
 the page text and links to subpages, if any.
 
-### FullScreenImages
+### full-screen-images
 
 Displays the images associated with a page in a full-screen view. If an image
 has a caption, it will be displayed when the associated image is displayed.
 
-### LocationsMap
+### locations-map
 
 Displays the locations associated with a page on a map.
 
-### LocationList
+### location-list
 
 Displays the locations associated with a page in a list. If
 the page also has images associated with it, they will be displayed in a
 gallery above the list of locations; selecting an image in the gallery will
 display the image in a full-screen view.
 
-### Videos
+### videos
 
 Displays videos associated with a page; selecting a video from the
 list of videos plays the video in a video player. If a video has an
