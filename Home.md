@@ -8,3 +8,6 @@
 - [[Page Templates]]
 - [[Style]]
 - [[Capabilities]]
+
+## Developer Notes
+- [[Upgrading to new PhoneGap versions]]
