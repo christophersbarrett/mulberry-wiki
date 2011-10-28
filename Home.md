@@ -2,7 +2,7 @@
 - [[An Overview of the Mulberry Tools]]
 - [[Getting Started]]
 
-## In Depth
+## Using Mulberry
 - [[Pages and Assets]]
 - [[Components]]
 - [[Page Templates]]
@@ -10,4 +10,7 @@
 - [[Capabilities]]
 
 ## Developer Notes
+
+These are resources for people who want to contribute to the Mulberry project. 
+
 - [[Upgrading to new PhoneGap versions]]
