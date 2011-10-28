@@ -4,17 +4,18 @@ template property to the page's YAML header:
 
     ---
     title: My Page
-    template: default
+    template:
+      phone: default
+      tablet: default
     ---
 
     My page's content is amazing.
 
-The template name is added as a class on the page's root element, as a hook for styling.
-
-You may want to consider creating different page templates for different device
-types. You can indicate that a page should use different templates for
-different device types by specifying a template object in a page's YAML header,
-rather than a template string:
+The template name is added as a class on the page's root element as a hook for
+styling. In this case we're using the `default` template for both phone and
+tablet. For really simple pages this might be ok, but most of the time you'll
+probably want your tablet pages to have a different layout. In that case, you'd
+specify different templates for each device type:
 
     ---
     title: My Image Page
