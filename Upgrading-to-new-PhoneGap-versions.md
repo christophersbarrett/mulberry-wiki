@@ -1,0 +1,54 @@
+- First upgrade the iphone xcode project (Toura.xcodeproj)
+    - Create a new project in /tmp called "Toura" using the PhoneGap template
+        - do not use automatic reference counting
+        - do not check option to create local git repo for project
+    - cd <mulberry>/lib/project_templates/iOS
+    - cp -R Toura/* /tmp/Toura/Toura/
+    - Add plugins to project:
+        - cntrl-click on the Plugins group and then Add Files to Toura...
+        - navigate to <mulberry>/lib/project_templates/iOS/Toura/Plugins
+        - select all files/directories
+        - select "Create groups for any added folders"
+        - click Add button
+    - Rinse/repeat the above for the Classes group but delete the AppDelegate.{h,c} files first
+    - Add FlurryLib group to the Toura group in a similar manner
+    - Add the UrbanAirship.plist file to the Supporting Files group
+    - Run the project in the simulator.  This will generate a www directory which will contain the new phonegap-x.x.x.js file.
+    - cp -R www/* /tmp/Toura/www/
+    - mv /tmp/Toura/www/phonegap-x.x.x.js /tmp/Toura/www/phonegap.js
+    - cd ..
+    - mv iOS iOS.bak
+    - close the xcode project
+    - mv /tmp/Toura iOS
+    - open up the xcode project from the new location in <mulberry>/lib/project_templates/iOS
+    - Drag the www directory from Finder into the project adding it to the root node.  Be sure to select the "Create folder references for any added folders" option.
+    - on the "Toura" Target change settings:
+        - Summary -> iOS Application Target -> Devices - iPhone
+        - Summary -> iOS Application Target -> Deployment Target - 4.0
+        - Build Settings -> Build Options -> Compiler for C/C++/Objective-C -> Apple LLVM compiler - 3.0
+- now update the ipad xcode project (Toura-iPad.xcodeproj)
+    - Create a new project in /tmp called "Toura-iPad" using the PhoneGap template
+        - do not use automatic reference counting
+        - do not check option to create local git repo for project
+    - close project
+    - mv /tmp/Toura-iPad/Toura-iPad.xcodeproj/ .
+    - open Toura-iPad.xcodeproj from the new location in <mulberry>/lib/project_templates/iOS
+    - rename the "Toura-iPad" group to "Toura"
+    - Change the directory that this group is mapped to -- this can be done in "Identity" panel to the far right when the group is selected.
+    - Add plugins to project:
+        - cntrl-click on the Plugins group and then Add Files to Toura-iPad ...
+        - navigate to <mulberry>/lib/project_templates/iOS/Toura/Plugins
+        - select all files/directories
+        - select "Create groups for any added folders"
+        - click Add button
+    - Rinse/repeat the above for the Classes group but delete the AppDelegate.{h,c} files first
+    - Add FlurryLib group to the Toura group in a similar manner
+    - Rename the Toura-iPad* files in the Supporting Files group to Toura-*
+    - Add the UrbanAirship.plist file to the Supporting Files group
+    - Drag the www directory from Finder into the project adding it to the root node.  Be sure to select the "Create folder references for any added folders" option.
+    - on the "Toura-iPad" Target change settings:
+        - Summary -> iOS Application Target -> Devices - iPad
+        - Summary -> iOS Application Target -> Deployment Target - 4.0
+        - Build Settings -> Build Options -> Compiler for C/C++/Objective-C -> Apple LLVM compiler - 3.0
+        - Build Settings -> Packaging -> Info.plist File - Toura/Toura-Info.plist
+        - Build Settings -> Apple LLVM compiler 3.0 - Language -> Prefix Header - Toura/Toura-Prefix.pch
