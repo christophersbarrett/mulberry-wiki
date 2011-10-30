@@ -6,7 +6,7 @@
 - [[Pages and Assets]]
 - [[Components]]
 - [[Page Templates]]
-- [[Style]]
+- [[Styles and Theming]]
 - [[Capabilities]]
 
 ## Developer Notes
