@@ -84,3 +84,6 @@ One of the most common UI style actions is simply hiding and showing something d
 
 Now, whenever the something-cool element gets hidden, it will fade out nicely. When it gets unhidden, it fades in nicely. The even nicer thing here is that we have added this without touching any application code. We can can keep presentation logic out of Javascript and in CSS.
 
+## Other Topics
+
+* [[Style Application Sequence]]
