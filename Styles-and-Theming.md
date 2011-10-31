@@ -40,7 +40,7 @@ Pages contain screens, which also contain their name as a class:
       }
     }
 
-And lastly there are regions (columns and rows), which can be selected either based on their name (optional in the template definition) or based on its position in the template.
+And lastly there are regions (columns and rows), which can be selected either based on the className you assign to them in the page template (optional in the template definition) or based on their position in the template.
 
     .page.my-template {
       color: green;
