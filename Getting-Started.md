@@ -1,3 +1,8 @@
+## Installation
+
+Be sure to read the [README](https://github.com/Toura/mulberry/blob/master/README.md) 
+for installation instructions before proceeding with the rest of the steps below.
+
 ## Scaffold
 
 Mulberry lets you quickly create the basic structure for an application at the
