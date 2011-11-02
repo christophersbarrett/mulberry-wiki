@@ -1,7 +1,7 @@
 ## Installation
 
-Be sure to read the [README](https://github.com/Toura/mulberry/blob/master/README.md) 
-for installation instructions before proceeding with the rest of the steps below.
+**You should read the [README](https://github.com/Toura/mulberry/blob/master/README.md) 
+for installation instructions before proceeding with the rest of the steps below.**
 
 ## Scaffold
 
