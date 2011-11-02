@@ -1,3 +1,6 @@
+## Installation
+- Installation instructions are in the [README](https://github.com/Toura/mulberry/blob/master/README.md)
+
 ## Overview
 - [[An Overview of the Mulberry Tools]]
 - [[Getting Started]]
