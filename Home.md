@@ -12,6 +12,11 @@
 - [[Styles and Theming]]
 - [[Capabilities]]
 
+## Release Notes / Upgrading
+- [[Versioning Philosophy and Commitment]]
+- [[0.2 Release Notes]]
+- [[Upgrade 0.1 to 0.2]]
+
 ## Developer Notes
 
 These are resources for people who want to contribute to the Mulberry project. 
