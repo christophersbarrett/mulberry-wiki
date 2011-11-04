@@ -1,5 +1,6 @@
 ## Installation
 - Installation instructions are in the [README](https://github.com/Toura/mulberry/blob/master/README.md)
+- NOTE: Only OSX Snow Leopard and OSX Lion are supported at the moment. Mulberry has been shown to run on Linux, but your mileage may vary.
 
 ## Overview
 - [[An Overview of the Mulberry Tools]]
