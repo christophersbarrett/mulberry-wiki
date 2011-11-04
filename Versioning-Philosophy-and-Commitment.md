@@ -4,7 +4,7 @@ While we are in beta, we will be following a modified form of [Semantic Versioni
 
 * "Master" at a given point in time may be unstable and/or include breaking changes
 * "Blessed" releases will be tagged - we aim to have a release once per month
-* Non breaking changes will bump the patch version (e.g. 0.1.0 -> 0.1.1)
+* Non breaking changes (small features, bug fixes, etc.) will bump the patch version (e.g. 0.1.0 -> 0.1.1)
 * Breaking changes (or significant functionality increases) will bump the minor version (e.g. 0.1.1 -> 0.2.0)
 
 # Commitment
