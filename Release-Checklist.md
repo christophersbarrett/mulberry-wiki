@@ -16,3 +16,4 @@
 - Post a message to the [Google Group](https://groups.google.com/forum/#!forum/toura-mulberry) with a link to the release notes, and provide any other pertinent information.
 - Announce the release on @touradev.
 - Update the topic in the IRC channel: `/topic Toura Mulberry - http://mulberry.toura.com - Latest Release: 0.X.X`
+- For major releases, write a blog post.
