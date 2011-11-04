@@ -15,6 +15,7 @@
 
 ## Release Notes / Upgrading
 - [[Versioning Philosophy and Commitment]]
+- [[0.1.1 Release Notes]]
 - [[0.2 Release Notes]]
 - [[Upgrade 0.1 to 0.2]]
 
