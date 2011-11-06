@@ -12,6 +12,7 @@
 - [[Page Templates]]
 - [[Styles and Theming]]
 - [[Capabilities]]
+- [[Feature Flags]]
 
 ## Release Notes / Upgrading
 - [[Versioning Philosophy and Commitment]]
