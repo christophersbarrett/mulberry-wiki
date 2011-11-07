@@ -1,3 +1,5 @@
 How to upgrade from 0.1 to 0.2:
 
-* Nothing yet to report
+* The template definition yaml format [changed](https://github.com/Toura/mulberry/pull/91). Any custom templates should be updated:
+    * regions no longer use `containerType` property
+    * regions now have a `type` property which can have the value of `row`, `column`, or `component` 
