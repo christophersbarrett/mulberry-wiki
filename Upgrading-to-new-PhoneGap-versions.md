@@ -54,3 +54,4 @@
         - Build Settings -> Packaging -> Info.plist File - Toura/Toura-Info.plist
         - Build Settings -> Apple LLVM compiler 3.0 - Language -> Prefix Header - Toura/Toura-Prefix.pch
     - remove icon@2x.png (reference only) from the Toura/Resources/Icons folder
+    - remove Default@2x.png (reference only) from the Toura/Resources/Splash folder
