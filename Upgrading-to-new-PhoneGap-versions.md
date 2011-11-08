@@ -26,6 +26,7 @@
         - Summary -> iOS Application Target -> Devices - iPhone
         - Summary -> iOS Application Target -> Deployment Target - 4.0
         - Build Settings -> Build Options -> Compiler for C/C++/Objective-C -> Apple LLVM compiler - 3.0
+    - remove icon-72.png (reference only) from the Toura/Resources/Icons folder
 - now update the ipad xcode project (Toura-iPad.xcodeproj)
     - Create a new project in /tmp called "Toura-iPad" using the PhoneGap template
         - do not use automatic reference counting
@@ -52,3 +53,4 @@
         - Build Settings -> Build Options -> Compiler for C/C++/Objective-C -> Apple LLVM compiler - 3.0
         - Build Settings -> Packaging -> Info.plist File - Toura/Toura-Info.plist
         - Build Settings -> Apple LLVM compiler 3.0 - Language -> Prefix Header - Toura/Toura-Prefix.pch
+    - remove icon@2x.png (reference only) from the Toura/Resources/Icons folder
