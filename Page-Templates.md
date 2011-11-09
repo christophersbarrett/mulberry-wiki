@@ -38,9 +38,9 @@ your own custom components and capabilities.
 
 Mulberry can create the YAML skeleton for a new template for you:
 
-    mulberry create_template BasicPageTemplate
+    mulberry create_template my-template
 
-This will create a file `ImageGallery.yml` in your project's templates
+This will create a file `my-template.yml` in your project's templates
 directory.
 
 A template consists of one or more screens; each screen contains one or more
@@ -50,17 +50,15 @@ interactions between components via "capabilities."
 
 Here's an example of a simple template that uses built-in components:
 
-    BasicPageTemplate:
+    my-template:
       screens:
         - name: index
           regions:
             - type: row
               size: fixed
-              scrollable: false
               components:
                 - PageNav
             - type: row
-              size: flex
               scrollable: true
               components:
                 - PageHeaderImage
