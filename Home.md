@@ -16,8 +16,8 @@
 
 ## Release Notes / Upgrading
 - [[Versioning Philosophy and Commitment]]
-- [[Breaking changes on master]] (these will be in a future release, but if you're working off master, you should read this)
 - [[0.1.1 Release Notes]]
+- [[0.next Notes]] (These are changes that are on master; they may or may not be incorporated into the next release.)
 - [[0.2 Release Notes]]
 - [[Upgrade 0.1 to 0.2]]
 
