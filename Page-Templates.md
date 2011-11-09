@@ -30,6 +30,43 @@ If you specify a template that does not exist, the page will not be
 displayed in your app. If you do not specify a template, then the built-in
 `default` template will be used.
 
+## Creating Your Own Page Templates
+
+You can specify your own page templates using a simple YAML structure. Your
+templates can use Mulberry's built-in components and capabilities, or you can create
+your own custom components and capabilities.
+
+Mulberry can create the YAML skeleton for a new template for you:
+
+    mulberry create_template BasicPageTemplate
+
+This will create a file `ImageGallery.yml` in your project's templates
+directory.
+
+A template consists of one or more screens; each screen contains one or more
+regions; and each region contains one or more components. Regions can also
+contain other regions, allowing for complex layouts. Templates can also specify
+interactions between components via "capabilities."
+
+Here's an example of a simple template that uses built-in components:
+
+    BasicPageTemplate:
+      screens:
+        - name: index
+          regions:
+            - type: row
+              size: fixed
+              scrollable: false
+              components:
+                - PageNav
+            - type: row
+              size: flex
+              scrollable: true
+              components:
+                - PageHeaderImage
+                - BodyText
+
+
 ## Built-In Page Templates
 
 Mulberry comes with several built-in page templates. Any of these templates can be
@@ -89,41 +126,6 @@ list of videos plays the video in a video player. If a video has an
 associated caption, the caption will be displayed when the audio is selected.
 Also displays the page text and links to subpages, if any.
 
-## Creating Your Own Page Templates
-
-You can specify your own page templates using a simple YAML structure. Your
-templates can use Mulberry's built-in components and capabilities, or you can create
-your own custom components and capabilities.
-
-Mulberry can create the YAML skeleton for a new template for you:
-
-    mulberry create_template BasicPageTemplate
-
-This will create a file `ImageGallery.yml` in your project's templates
-directory.
-
-A template consists of one or more screens; each screen contains one or more
-regions; and each region contains one or more components. Regions can also
-contain other regions, allowing for complex layouts. Templates can also specify
-interactions between components via "capabilities."
-
-Here's an example of a simple template that uses built-in components:
-
-    BasicPageTemplate:
-      screens:
-        - name: index
-          regions:
-            -
-              size: fixed
-              scrollable: false
-              components:
-                - PageNav
-            -
-              size: flex
-              scrollable: true
-              components:
-                - PageHeaderImage
-                - BodyText
 
 TODOC: subregions
 
