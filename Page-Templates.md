@@ -65,8 +65,10 @@ This is best explained with an example:
 
 Regions also have a few other options. Set `scrollable: true` to make the region scrollable. The `size` option defines how the region will determine its size. It has two possible values:
 
-* `flex`: [default] the region will take up as much space as it can. Multiple regions within the same container will all take up equal amount of space
+* `flex`: [default] the region will take up as much space as it can. Multiple regions within the same container will all take up equal amount of space. 
 * `fixed`: the region will take the size of its contents -- no more, no less.
+
+If you need more control over the size of your regions (which you probably will), then you can handle that in the Sass for the template, explained in [[Styles and Theming]].
 
 ## Built-In Page Templates
 
