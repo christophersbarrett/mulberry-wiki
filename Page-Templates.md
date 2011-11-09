@@ -1,4 +1,4 @@
-Each page in a Mulberry application is displayed using a page template. You can use
+Each page in a Mulberry application is displayed using a page **template**. You can use
 built-in templates, or create your own. To specify a template for a page, add a
 template property to the page's YAML header:
 
@@ -43,12 +43,11 @@ Mulberry can create the YAML skeleton for a new template for you:
 This will create a file `my-template.yml` in your project's templates
 directory.
 
-A template consists of one or more screens; each screen contains one or more
-regions; and each region contains one or more components. Regions can also
-contain other regions, allowing for complex layouts. Templates can also specify
-interactions between components via "capabilities."
+A template consists of one or more **screens**; each screen contains one or more
+**regions** which are defined as either **columns** or **rows**; and each region contains one or more components. Regions can also contain other regions, allowing for complex layouts. Templates can also specify
+interactions between components via **capabilities**.
 
-Here's an example of a simple template that uses built-in components:
+This is best explained with an example:
 
     my-template:
       screens:
@@ -64,6 +63,10 @@ Here's an example of a simple template that uses built-in components:
                 - PageHeaderImage
                 - BodyText
 
+Regions also have a few other options. Set `scrollable: true` to make the region scrollable. The `size` option defines how the region will determine its size. It has two possible values:
+
+* `flex`: [default] the region will take up as much space as it can. Multiple regions within the same container will all take up equal amount of space
+* `fixed`: the region will take the size of its contents -- no more, no less.
 
 ## Built-In Page Templates
 
