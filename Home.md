@@ -18,7 +18,6 @@
 - [[Versioning Philosophy and Commitment]]
 - [[0.1.1 Release Notes]]
 - [[0.next Release Notes]] (These are changes that are on master; they may or may not be incorporated into the next release.)
-- [[0.2 Release Notes]]
 - [[Upgrade 0.1 to 0.2]]
 
 ## Developer Notes
