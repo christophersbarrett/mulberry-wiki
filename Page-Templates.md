@@ -90,7 +90,7 @@ links to subpages, if any.
 ### grid-view
 
 Displays the page text and a grid of links to subpages; a featured image
-should specified in order to be displayed in the grid.
+should be specified in order to be displayed in the grid.
 
 ### home
 
