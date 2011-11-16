@@ -143,9 +143,9 @@ YAML header:
 Mulberry provides helpers to create data assets. From your app directory, you can
 run:
 
-    mulberry create_data my-data           # creates assets/data/my-data.yml
-    mulberry create_feed my-feed           # creates assets/feeds/my-feed.yml
-    mulberry create_location my-location   # creates assets/locations/my-location.yml
+    mulberry create data my-data           # creates assets/data/my-data.yml
+    mulberry create feed my-feed           # creates assets/feeds/my-feed.yml
+    mulberry create location my-location   # creates assets/locations/my-location.yml
 
 These commands will create a stub file at the proper location, using the name
 you specify. The contents of the stub files indicate the proper contents for
