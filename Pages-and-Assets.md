@@ -13,7 +13,7 @@ the hierarchy of your application.
 Once you have created an entry in the sitemap, you need to create the page.
 From inside your app directory, you can run the following command:
 
-    mulberry create_page speakers
+    mulberry create page speakers
 
 This creates a file for you at `pages/speakers.md`. If you open the file, you
 can see that pages consist of a YAML header that provides metadata about the page, and
