@@ -144,7 +144,7 @@ component for displaying a Twitter feed.
 
 To start, run the following command from your app directory:
 
-    mulberry create_component Twitter
+    mulberry create component Twitter
 
 This will:
 
