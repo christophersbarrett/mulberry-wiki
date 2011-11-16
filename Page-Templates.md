@@ -38,7 +38,7 @@ your own custom components and capabilities.
 
 Mulberry can create the YAML skeleton for a new template for you:
 
-    mulberry create_template my-template
+    mulberry create template my-template
 
 This will create a file `my-template.yml` in your project's templates
 directory.
