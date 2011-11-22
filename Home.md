@@ -7,6 +7,9 @@
 - [[Getting Started]]
 
 ## Using Mulberry
+- [[The Mulberry Command Line Interface]]
+
+## Understanding Mulberry
 - [[Pages and Assets]]
 - [[Components]]
 - [[Page Templates]]
