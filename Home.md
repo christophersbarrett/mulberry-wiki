@@ -7,8 +7,9 @@
 - [[Getting Started]]
 
 ## Using Mulberry
-- [[The Mulberry Command Line Interface]]
-- [[The Mulberry JavaScript API]]
+- [[Command Line Interface]]
+- [[JavaScript API]]
+- [[Creating Custom Components]]
 
 ## Understanding Mulberry
 - [[Pages and Assets]]
