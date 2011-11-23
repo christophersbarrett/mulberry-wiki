@@ -18,7 +18,6 @@
 - [[Styles and Theming]]
 - [[Capabilities]]
 - [[Feature Flags]]
-- [[Configuration]]
 
 ## Release Notes / Upgrading
 - [[Versioning Philosophy and Commitment]]
