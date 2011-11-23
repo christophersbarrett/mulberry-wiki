@@ -1,8 +1,10 @@
 # The Mulberry Command Line Interface
 
-With the exception of `mulberry scaffold`, the following commands should be run from inside a directory that contains a Mulberry project. You can run `mulberry -v` from anywhere to find out which version of Mulberry you are currently running.
+With the exception of `mulberry scaffold`, Mulberry commands should be run from inside a directory that contains a Mulberry project. 
 
 **The location of the `mulberry/bin/mulberry` file must be in your $PATH in order for any of these commands to work!**
+
+You can run `mulberry -v` from anywhere to find out which version of Mulberry you are currently running.
 
 ## Creating apps
 
