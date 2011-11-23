@@ -1,4 +1,4 @@
-With the exception of `mulberry scaffold`, Mulberry commands should be run from inside a directory that contains a Mulberry project. 
+With the exception of `mulberry scaffold <name>`, Mulberry commands must be run from inside a directory that contains a Mulberry project. 
 
 **The location of the `mulberry/bin/mulberry` file must be in your $PATH in order for any of these commands to work!**
 
@@ -7,6 +7,7 @@ You can run `mulberry -v` from anywhere to find out which version of Mulberry yo
 ## Creating apps
 
 * `mulberry scaffold <name>` Create the skeleton of an app in a directory with the provided name. The provided directory should not exist prior to running this command.
+* `mulberry scaffold` If run without a `<name>` argument, this command must be run from inside a Mulberry project. It will create any pages that are defined in the `sitemap.yml` file but that do not exist in a project's `pages` directory.
 * `mulberry create page <name>` Create a file at `pages/<pagename>.md` that contains the basic structure for defining a page.
 
 ### Asset creation
