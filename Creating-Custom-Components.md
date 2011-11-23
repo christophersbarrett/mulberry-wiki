@@ -4,17 +4,17 @@ component for displaying a Twitter feed.
 
 To start, run the following command from your app directory:
 
-    mulberry create component Twitter
+    mulberry create component MyCustomComponent
 
 This will:
 
-- create a stub component file at `javascript/components/Twitter.js`
-- create a component resources directory at `javascript/components/Twitter/`
+- create a component JavaScript file at `javascript/components/MyCustomComponent.js` that uses `mulberry.component` to define the component. The `mulberry.component` method receives the name of the component, and an object to be used as the component's prototype (see the information below about Component Lifecycle Methods and Component Instance Methods).
+- create a component resources directory at `javascript/components/MyCustomComponent/`
 - create a component template file at
-  `javascript/components/Twitter/Twitter.haml`
+  `javascript/components/MyCustomComponent/MyCustomComponent.haml` that sets the component's initial template as a simple `<div>`.
 - add the appropriate `dojo.require` statement to your project's base
   JavaScript file, located at `javascript/base.js`
-- create a SCSS file at `javascript/components/Twitter/_twitter.scss`
+- create a SCSS file at `javascript/components/MyCustomComponent/_my-custom-component.scss`
 - add the appropriate `@import` statement to your project's base SCSS file.
 
 The rest of this page explains the features and methods available to custom components. You may want to [read this post that shows an example of creating a custom component](http://mulberry.toura.com/blog/2011/10/30/custom-functionality/).
@@ -25,12 +25,12 @@ If your component code needs to refer to a specific element in your component's
 DOM structure, you can query that element using jQuery or dojo.query, but a
 better solution is to label the element as a `dojoAttachPoint` in the component template.
 
-    %div.component.twitter
+    %div.component.my-custom-component
       %button{ dojoAttachPoint : 'refreshButton' }
-      %ul{ dojoAttachPoint : 'tweetsList' }
+      %ul{ dojoAttachPoint : 'list' }
 
 These nodes will automatically be available to you as `this.refreshButton` and
-`this.tweetsList` in your component code.
+`this.list` in your component code.
 
 ### Component Properties
 
@@ -54,7 +54,9 @@ then the default is `%div`.
 
 ### Component Lifecycle Methods
 
-Mulberry's extensible component system offers a number of API methods for interacting with components throughout their lifecycle. These methods run in order when a component is placed on a page. Here are those methods in the order in which they are called:
+Mulberry's extensible component system offers a number of "lifecycle" methods, allowing you to control aspects of a component's behavior at various points. You can 
+
+These methods run in order when a component is placed on a page. Here are those methods in the order in which they are called:
 
 * `prep`: Prepare the data that your component will need. In this method, you can rearrange data that's contained in the component's `baseObj` property, which will contain all of the information that Mulberry knows about the page that's using the component. This method is part of the default component skeleton that Mulberry generates for you.
 * `setupChildComponents`: Runs after the component is created, but before it is visible on the page. If you want to programmatically add child components to your component prior to displaying it, this is the place to do it. Be sure to read about `this.adopt`, below, which allows you to add components in a way that they will be properly torn down when the parent component is removed from the page.
@@ -83,11 +85,13 @@ Components expose a number of useful instance methods. For example usage, see th
 * `this.orphan`: If you have instantiated a component via `this.adopt`, `this.orphan` is the way to destroy it when you are finished with it.
 * `this.inherited`: When overriding a method from a superclass, invoking `this.inherited(arguments)` within the subclass method will call the superclass method that is being overridden and pass the arguments through. `this.inherited` is similar to `super` in other object-oriented languages.
 
+You can use these instance methods as appropriate throughout your custom component definition.
+
 ### Connecting to Events
 
-While Mulberry provides access to jQuery API methods for convenience, _you should not
+While Mulberry provides access to jQuery API methods for convenience, **you should not
 use jQuery for connecting to events unless you have a plan for managing the
-teardown of those events_ when moving to a new page. Instead, you should use the
+teardown of those events**. Instead, you should use the
 component's built-in `connect` method, which will automatically manage event
 teardown.
 
@@ -155,11 +159,11 @@ you can publish your announcement:
     _onRefresh : function() {
       // ... code to refresh the component ...
       this.refreshTimes = (this.refreshTimes || 0)++;
-      dojo.publish('/twitter/refresh', [ this.refreshTimes ]);
+      dojo.publish('/mycomponent/refresh', [ this.refreshTimes ]);
     }
 
 Then, other pieces of your application can subscribe to these announcements:
 
-    dojo.subscribe('/twitter/refresh', function(refreshTimes) {
+    dojo.subscribe('/mycomponent/refresh', function(refreshTimes) {
       // ...
     });
