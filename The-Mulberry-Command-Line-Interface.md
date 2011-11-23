@@ -2,7 +2,7 @@
 
 With the exception of `mulberry scaffold`, the following commands should be run from inside a directory that contains a Mulberry project. You can run `mulberry -v` from anywhere to find out which version of Mulberry you are currently running.
 
-**Note that, once you download Mulberry, you will need to add the location of the `mulberry/bin/mulberry` file to your $PATH in order for any of these commands to work!**
+**The location of the `mulberry/bin/mulberry` file must be in your $PATH in order for any of these commands to work!**
 
 ## Creating apps
 
