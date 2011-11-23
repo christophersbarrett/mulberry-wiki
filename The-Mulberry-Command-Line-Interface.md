@@ -11,11 +11,15 @@ With the exception of `mulberry scaffold`, the following commands should be run 
 
 ### Asset creation
 
-The following commands create assets that can be associated with pages in your app. Note that there are other asset types that you can include (such as images, videos, and audios) simply by adding them to the proper directories in your project. Note also that an asset must be associated with a page in order to be available in your app.
+The following commands create assets that can be associated with pages in your app. 
 
 * `mulberry create data <name>` Create a file at `assets/data/<name>.yml`, which you can populate with custom data to be used by your app.
 * `mulberry create feed <name>` Create a file at `assets/feeds/<name>.yml`, which you can populate with information about an RSS feed to be included in your app.
 * `mulberry create location <name>` Create a file at `assets/locations/<name>.yml`, which you can populate with information about a geographic location to be included in your app.
+
+You can create other asset types, such as images, videos, and audios, by adding them to the proper directories in the `assets` directory. 
+
+**Note that an asset must be associated with a page in order to be available in your app.**
 
 ### Code creation
 
