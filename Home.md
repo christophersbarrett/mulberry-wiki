@@ -8,6 +8,7 @@
 
 ## Using Mulberry
 - [[The Mulberry Command Line Interface]]
+- [[The Mulberry JavaScript API]]
 
 ## Understanding Mulberry
 - [[Pages and Assets]]
