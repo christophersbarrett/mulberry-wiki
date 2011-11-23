@@ -135,5 +135,5 @@ not support the HTML5 `video` tag -- for displaying a *video*. Exposes a
 setter that allows changing the current video source file. Announces user
 interaction with the player.
 
-
+## Creating Custom Components
 Read about [[Creating Custom Components]]
