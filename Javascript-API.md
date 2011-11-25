@@ -31,6 +31,7 @@ Note that the `mulberry` “namespace” is just an alias to the `toura` namespa
 
 ## PhoneGap/Device
 
+- `mulberry.app.PhoneGap.registerAPI`
 - `mulberry.app.PhoneGap.network`
   - isReachable()
 - `mulberry.app.PhoneGap.notification`
