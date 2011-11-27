@@ -7,11 +7,11 @@ generally defined in the framework code as `toura.*`.
 
 ## Creating Custom Components, Capabilities, and Data Sources
 
-### mulberry.component
+### mulberry.component(name, prototype)
 
-_Defined in: `toura\_app/javascript/toura/components/\_Component.js`
+*Defined in: `toura\_app/javascript/toura/components/\_Component.js`.*
 
-`mulberry.component(name, prototype)` Creates and returns a constructor for a
+Creates and returns a constructor for a
 component with the provided name using the provided prototye. The created
 component can be used as part of a template definition as
 `custom.ComponentName` or programmatically as
@@ -43,14 +43,14 @@ Here is an example of a component defined with mulberry.component:
       }
     });
 
-### mulberry.capability
+### mulberry.capability(name, prototype)
 
-_Defined in: `toura\_app/javascript/toura/capabilities/\_Capability.js`
+*Defined in: `toura\_app/javascript/toura/capabilities/\_Capability.js`*
 
-`mulberry.capability(name, prototype)` Creates a capability, which can be added
-to a template definition to describe the interaction between components on a
-page. A capability created using `mulberry.capability` can be referred to in a
-template definition as `CapabilityName`. See [[Capabilities]] for more details.
+Creates a capability, which can be added to a template definition to describe
+the interaction between components on a page. A capability created using
+`mulberry.capability` can be referred to in a template definition as
+`CapabilityName`. See [[Capabilities]] for more details.
 
 Here is an example of a capability that describes how WidgetB should behave
 when WidgetA's `onWiggle` method is called:
@@ -72,13 +72,13 @@ when WidgetA's `onWiggle` method is called:
 
 ### mulberry.datasource
 
-_Defined in: `toura\_app/javascript/toura/Utilities.js`
+*Defined in: `toura\_app/javascript/toura/Utilities.js`*
 
-`mulberry.datasource(name, prototype)` Creats a datasource using the provided
-name and prototype. The datasource can be instantiated for application-wide use
-at application start by subscribing to the `/app/started` topic, or it can be
-instantiated as needed in individual capabilities or components. In either
-case, the datasource is availalbe at `client.data.DatsourceName`.
+Creats a datasource using the provided name and prototype. The datasource can
+be instantiated for application-wide use at application start by subscribing to
+the `/app/started` topic, or it can be instantiated as needed in individual
+capabilities or components. In either case, the datasource is availalbe at
+`client.data.DatsourceName`.
 
     mulberry.datasource('Google', {
       search : function(term) {
@@ -95,23 +95,35 @@ case, the datasource is availalbe at `client.data.DatsourceName`.
 
 For details on these methods, see `toura\_app/javascript/toura/app/Router.js`.
 
-- `mulberry.route(route, handler, isDefault)` Defines a custom route for the
-  application. The route argument can be a string or a regular expression; for
-  examples, see `toura\_app/javascript/toura/app/Routes.js`. The handler
-  argument is a function to be used to handle the route. It receives two
-  arguments: a params object containing parameters contained in the URL, and an
-  augmented route object with information about the route being run. The
-  isDefault argument is optional; if true, the route will be used as the
-  default (home) route for the application.
-- `mulberry.routes(routesArray)` Defines a set of custom routes for the
-  application using an array of routes objects. Each object must have a `route`
-  and a `handler` property; each object may optionally include an `isDefault`
-  property. These properties work just like the arguments to `mulberry.route`.
-- `mulberry.app.Router.go(hash)` Directs the application to go to the specified
-  hash.
-- `mulberry.app.Router.home()` Directs the application to go to the
-  home/default route.
-- `mulberry.app.Router.back()` Directs the application to go back one page.
+### mulberry.route(route, handler, isDefault)
+
+Defines a custom route for the application. The route argument can be a string
+or a regular expression; for examples, see
+`toura\_app/javascript/toura/app/Routes.js`. The handler argument is a
+function to be used to handle the route. It receives two arguments: a params
+object containing parameters contained in the URL, and an augmented route
+object with information about the route being run. The isDefault argument is
+optional; if true, the route will be used as the default (home) route for the
+application.
+
+### mulberry.routes(routesArray)
+
+Defines a set of custom routes for the application using an array of routes
+objects. Each object must have a `route` and a `handler` property; each
+object may optionally include an `isDefault` property. These properties work
+just like the arguments to `mulberry.route`.
+
+### mulberry.app.Router.go(hash)
+
+Directs the application to go to the specified hash.
+
+### mulberry.app.Router.home()
+
+Directs the application to go to the home/default route.
+
+### mulberry.app.Router.back()
+
+Directs the application to go back one page.
 
 ## Page Creation
 
