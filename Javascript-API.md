@@ -188,20 +188,20 @@ Here is an example:
 
 ### mulberry.app.PhoneGap.network
 
-*Defined in `toura_app/javascript/toura/app/PhoneGap/network.js*
+*Defined in `toura_app/javascript/toura/app/PhoneGap/network.js`*
 
 - `isReachable()` Returns a promise that will resolve true if a network is
   available; the promise resolves false otherwise.
 
 ### mulberry.app.PhoneGap.notification
 
-*Defined in `toura_app/javascript/toura/app/PhoneGap/notification.js*
+*Defined in `toura_app/javascript/toura/app/PhoneGap/notification.js`*
 
 - `alert()` Displays an alert notification.
 
 ### mulberry.app.PhoneGap.browser
 
-*Defined in `toura_app/javascript/toura/app/PhoneGap/browser.js*
+*Defined in `toura_app/javascript/toura/app/PhoneGap/browser.js`*
 
 - `url(url)` Opens a ChildBrowser at the specified URL.
 - `getBrowser()` Returns the ChildBrowser instance.
