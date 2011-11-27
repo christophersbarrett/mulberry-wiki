@@ -5,7 +5,8 @@ Note that the `mulberry` “namespace” is just an alias to the `toura` namespa
 all `mulberry.*` methods can be accessed as `toura.*` as well, and they are
 generally defined in the framework code as `toura.*`.
 
-## Creating Custom Components, Capabilities, and Data Sources
+
+## Building Blocks
 
 ### mulberry.component(name, prototype)
 
@@ -91,9 +92,10 @@ capabilities or components. In either case, the datasource is availalbe at
       dojo.unsubscribe(s);
     });
 
+
 ## Routing
 
-For details on these methods, see `toura\_app/javascript/toura/app/Router.js`.
+Defined in `toura_app/javascript/toura/app/Router.js`.
 
 ### mulberry.route(route, handler, isDefault)
 
@@ -125,38 +127,49 @@ Directs the application to go to the home/default route.
 
 Directs the application to go back one page.
 
+
 ## Page Creation
 
-- `mulberry.app.PageFactory.createPage(pageData)` Directs the application to
-  construct a page based on the provided `pageData` object. The object should
-  include a `pageController` property to indicate which pre-defined template to
-  use; if one is not provided, the Default template will be used. The entire
-  `pageData` object will be available to all components on the page via their
-  `baseObj` property. For usage examples, see
-  `toura\_app/javascript/toura/app/Routes.js`.
+### mulberry.app.PageFactory.createPage(pageData)
+
+Directs the application to construct a page based on the provided `pageData`
+object. The object should include a `pageController` property to indicate which
+pre-defined template to use; if one is not provided, the Default template will
+be used. The entire `pageData` object will be available to all components on
+the page via their `baseObj` property. For usage examples, see
+`toura\_app/javascript/toura/app/Routes.js`.
 
 ## User Interface
 
-- `mulberry.app.UI.set(prop, val)`
-- `mulberry.app.UI.showPage(page)`
-- `mulberry.app.UI.viewport`
-- `mulberry.app.UI.currentPage`
+### mulberry.app.UI.set(prop, val)
+
+### mulberry.app.UI.showPage(page)
+
+### mulberry.app.UI.viewport
+
+### mulberry.app.UI.currentPage
 
 ## PhoneGap/Device
 
-- `mulberry.app.PhoneGap.registerAPI`
-- `mulberry.app.PhoneGap.network`
-  - isReachable()
-- `mulberry.app.PhoneGap.notification`
-  - alert()
-- `mulberry.app.PhoneGap.browser`
-  - url(url)
-  - getBrowser()
+### mulberry.app.PhoneGap.registerAPI(name, moduleFunction)
+
+### mulberry.app.PhoneGap.network
+- isReachable()
+
+### mulberry.app.PhoneGap.notification
+- alert()
+
+### mulberry.app.PhoneGap.browser
+- url(url)
+- getBrowser()
+
 
 ## Config
 
-- `mulberry.app.Config.get(key)`
-- `mulberry.app.Config.set(key, value)`
+### mulberry.app.Config.get(key)
+
+### mulberry.app.Config.set(key, value)
+
 
 ## Device Storage
 
