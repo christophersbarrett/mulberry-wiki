@@ -130,6 +130,8 @@ Directs the application to go back one page.
 
 ## Page Creation
 
+*Defined in `toura_app/javascript/toura/app/PageFactory`*
+
 ### mulberry.app.PageFactory.createPage(pageData)
 
 Directs the application to construct a page based on the provided `pageData`
@@ -141,55 +143,130 @@ the page via their `baseObj` property. For usage examples, see
 
 ## User Interface
 
-### mulberry.app.UI.set(prop, val)
+*Defined in `toura_app/javascript/toura/app/UI.js`*
 
 ### mulberry.app.UI.showPage(page)
 
+Places the provided page object in the user interface, and transitions from the
+old page to the new page.
+
 ### mulberry.app.UI.viewport
 
+An object containing information about the dimensions of the viewport.
+
 ### mulberry.app.UI.currentPage
+
+An object containing information about the current page.
+
 
 ## PhoneGap/Device
 
 ### mulberry.app.PhoneGap.registerAPI(name, moduleFunction)
 
+*Defined in `toura_app/javascript/toura/app/PhoneGap.js`*
+
+Creates an entry in the `mulberry.app.PhoneGap` namespace with the provided
+name, exposing the module that is returned when the moduleFunction is executed.
+The moduleFunction receives two arguments: a boolean indicating whether
+PhoneGap is present in the current environment, and an object containing
+information about the current device.
+
+Here is an example:
+
+    mulberry.app.PhoneGap.registerAPI('custom', function(phonegap, device) {
+      return {
+        logDeviceType : function() {
+          console.log(device.type);
+          if (phonegap) {
+            console.log('Phonegap is available, too!');
+          }
+        }
+      }
+    });
+
+    mulberry.app.PhoneGap.custom.logDeviceType();
+
 ### mulberry.app.PhoneGap.network
-- `isReachable()`
+
+*Defined in `toura_app/javascript/toura/app/PhoneGap/network.js*
+
+- `isReachable()` Returns a promise that will resolve true if a network is
+  available; the promise resolves false otherwise.
 
 ### mulberry.app.PhoneGap.notification
-- `alert()`
+
+*Defined in `toura_app/javascript/toura/app/PhoneGap/notification.js*
+
+- `alert()` Displays an alert notification.
 
 ### mulberry.app.PhoneGap.browser
-- `url(url)`
-- `getBrowser()`
+
+*Defined in `toura_app/javascript/toura/app/PhoneGap/browser.js*
+
+- `url(url)` Opens a ChildBrowser at the specified URL.
+- `getBrowser()` Returns the ChildBrowser instance.
 
 
 ## Config
 
+*Defined in `toura_app/javascript/toura/app/Config.js`*
+
 ### mulberry.app.Config.get(key)
+
+Returns the value of the specified configuration key. Information about an app,
+for example, is available via `mulberry.app.Config.get('app');`
 
 ### mulberry.app.Config.set(key, value)
 
+Sets the value of the specified configuration key to the provided value.
 
 ## Device Storage
 
 ### mulberry.app.DeviceStorage.get(key)
 
+Gets the value of the specified key from device storage.
+
 ### mulberry.app.DeviceStorage.set(key, value)
+
+Stores the value of the specified key in device storage.
 
 ### mulberry.app.DeviceStorage.drop()
 
+Clears *all* device storage, including SQLite and local storage.
 
 ## Utilities
 
+*Defined in `toura_app/javascript/toura/Utilities.js`.*
+
 ### mulberry.tmpl(string, dataObject)`
+
+Returns a string based on substituting placeholders in the provided string with
+values from the provided dataObject. This is an alias for
+[`dojo.string.substitute`](http://dojotoolkit.org/api/1.6/dojo/string/substitute).
+For more details, see [this article from Daniel Eric Lee](http://www.enterprisedojo.com/2011/10/14/coast-to-coast-with-dojo-string-substitute/).
 
 ### mulberry.haml(hamlTemplateString)`
 
-### mulberry.jsonp(url)`
+Given a [Haml template](https://github.com/creationix/haml-js), returns a
+function that can be passed a data object. The returned function will use the
+data object to populate the template, and return a string.
+
+    var templateFn = mulberry.haml(".foo= bar");
+
+    templateFn({ bar : 'baz' }); // <div class="foo">baz</div>
+
+### mulberry.jsonp(url)
+
+Returns a promise that will resolve with the JSON returned from the provided URL.
+
+    var response = mulberry.jsonp('http://foo.com');
+
+    response.then(function(data) {
+      console.log(data);
+    });
 
 
-# Useful pub/sub topics
+## Useful pub/sub topics
 
 The JavaScript framework publishes several useful "topics" at key points in the
 application's lifecycle. You can add a subscription to any of these topics via
