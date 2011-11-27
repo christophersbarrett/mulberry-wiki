@@ -154,14 +154,14 @@ the page via their `baseObj` property. For usage examples, see
 ### mulberry.app.PhoneGap.registerAPI(name, moduleFunction)
 
 ### mulberry.app.PhoneGap.network
-- isReachable()
+- `isReachable()`
 
 ### mulberry.app.PhoneGap.notification
-- alert()
+- `alert()`
 
 ### mulberry.app.PhoneGap.browser
-- url(url)
-- getBrowser()
+- `url(url)`
+- `getBrowser()`
 
 
 ## Config
@@ -173,15 +173,21 @@ the page via their `baseObj` property. For usage examples, see
 
 ## Device Storage
 
-- `mulberry.app.DeviceStorage.get(key)`
-- `mulberry.app.DeviceStorage.set(key, value)`
-- `mulberry.app.DeviceStorage.drop()`
+### mulberry.app.DeviceStorage.get(key)
+
+### mulberry.app.DeviceStorage.set(key, value)
+
+### mulberry.app.DeviceStorage.drop()
+
 
 ## Utilities
 
-- `mulberry.tmpl(string, dataObject)`
-- `mulberry.haml(hamlTemplateString)`
-- `mulberry.jsonp(url)`
+### mulberry.tmpl(string, dataObject)`
+
+### mulberry.haml(hamlTemplateString)`
+
+### mulberry.jsonp(url)`
+
 
 # Useful pub/sub topics
 
