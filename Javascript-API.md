@@ -238,14 +238,14 @@ Clears *all* device storage, including SQLite and local storage.
 
 *Defined in `toura_app/javascript/toura/Utilities.js`.*
 
-### mulberry.tmpl(string, dataObject)`
+### mulberry.tmpl(string, dataObject)
 
 Returns a string based on substituting placeholders in the provided string with
 values from the provided dataObject. This is an alias for
 [`dojo.string.substitute`](http://dojotoolkit.org/api/1.6/dojo/string/substitute).
 For more details, see [this article from Daniel Eric Lee](http://www.enterprisedojo.com/2011/10/14/coast-to-coast-with-dojo-string-substitute/).
 
-### mulberry.haml(hamlTemplateString)`
+### mulberry.haml(hamlTemplateString)
 
 Given a [Haml template](https://github.com/creationix/haml-js), returns a
 function that can be passed a data object. The returned function will use the
@@ -279,36 +279,51 @@ application's lifecycle. You can add a subscription to any of these topics via
 Note that the `dojo.subscribe` method returns a "handle" that can be passed to
 `dojo.unsubscribe` if the subscription is no longer needed.
 
-## Application state
+### /app/deviceready
 
-- `/app/deviceready` Subscriptions to this topic will run as soon as the device
-  is ready. In a PhoneGap environment, this topic is triggered when the
-  `deviceready` event fires; in a browser environment, this topic is triggered
-  when the `body` element's `onload` event fires. *This is intended for
-  internal use only, but it may prove useful to you.* Triggered in
-  `toura\_app/javascript/toura/base.js`.
-- `/app/ready` Subscriptions to this topic will run as soon as the data for the
-  application has been bootstrapped, but before the DOM has been populated.
-  *This topic is also intended for internal use only, but it may prove useful
-  to you.* Triggered in `toura\_app/javascript/toura/base.js`.
-- `/app/started` Subscriptions to this topic will run once the initial view of
-  the application has been displayed. Triggered in
-  `toura\_app/javascript/toura/base.js`.
-- `/router/handleHash/after` Subscriptions to this topic will run once a change
-  in the URL's hash has been handled; note that the new content may not yet be
-  displayed at this time. Triggered in
-  `toura\_app/javascript/toura/app/Router.js`.
-- `/node/view` Subscriptions to this topic will run when any page specified via
-  markdown is viewed; subscribers to this topic will receive an argument
-  containing the URL of the page that was viewed. Triggered in
-  `toura\_app/javascript/toura/app/Routes.js`.
+Subscriptions to this topic will run as soon as the device is ready. In a
+PhoneGap environment, this topic is triggered when the `deviceready` event
+fires; in a browser environment, this topic is triggered when the `body`
+element's `onload` event fires. *This is intended for internal use only, but it
+may prove useful to you.* Triggered in `toura\_app/javascript/toura/base.js`.
 
-## User Interface
+### /app/ready
 
-- `/window/resize` Subscriptions to this topic will run whenever the window is
-  resized. Triggered in `toura\_app/javascript/toura/app/UI.js`.
-- `/button/menu` Subscriptions to this topic will run whenever a device's menu
-  button is pressed. Triggered in `toura\_app/javascript/toura/app/UI.js`.
-- `/page/transition/end` Subscriptions to this topic will run when the
-  application is finished transitioning to a new page. Triggered in
-  `toura\_app/javascript/toura/containers/Pages.js`
+Subscriptions to this topic will run as soon as the data for the application
+has been bootstrapped, but before the DOM has been populated.  *This topic is
+also intended for internal use only, but it may prove useful to you.*
+Triggered in `toura\_app/javascript/toura/base.js`.
+
+### /app/started
+
+Subscriptions to this topic will run once the initial view of the application
+has been displayed. Triggered in `toura\_app/javascript/toura/base.js`.
+
+### /router/handleHash/after
+
+Subscriptions to this topic will run once a change in the URL's hash has been
+handled; note that the new content may not yet be displayed at this time.
+Triggered in `toura\_app/javascript/toura/app/Router.js`.
+
+### /node/view
+
+Subscriptions to this topic will run when any page specified via markdown is
+viewed; subscribers to this topic will receive an argument containing the URL
+of the page that was viewed. Triggered in
+`toura\_app/javascript/toura/app/Routes.js`.
+
+### /window/resize
+
+Subscriptions to this topic will run whenever the window is resized. Triggered
+in `toura\_app/javascript/toura/app/UI.js`.
+
+### /button/menu
+
+Subscriptions to this topic will run whenever a device's menu button is
+pressed. Triggered in `toura\_app/javascript/toura/app/UI.js`.
+
+### /page/transition/end
+
+Subscriptions to this topic will run when the application is finished
+transitioning to a new page. Triggered in
+`toura\_app/javascript/toura/containers/Pages.js`
