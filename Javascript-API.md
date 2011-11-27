@@ -10,7 +10,7 @@ generally defined in the framework code as `toura.*`.
 
 ### mulberry.component(name, prototype)
 
-*Defined in: `toura_app/javascript/toura/components/\_Component.js`.*
+*Defined in: `toura_app/javascript/toura/components/_Component.js`.*
 
 Creates and returns a constructor for a
 component with the provided name using the provided prototye. The created
@@ -46,7 +46,7 @@ Here is an example of a component defined with mulberry.component:
 
 ### mulberry.capability(name, prototype)
 
-*Defined in: `toura_app/javascript/toura/capabilities/\_Capability.js`*
+*Defined in: `toura_app/javascript/toura/capabilities/_Capability.js`*
 
 Creates a capability, which can be added to a template definition to describe
 the interaction between components on a page. A capability created using
