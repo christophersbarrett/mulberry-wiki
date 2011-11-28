@@ -1,7 +1,6 @@
 ## Preparing the Release
 
 - Run the tests and ensure they all pass: `rake`
-- Ensure you can serve the kitchensink demo: `mulberry serve demos/kitchensink/`
 - Ensure you can test the kitchensink demo: `mulberry test demos/kitchensink/`
 - Review the diff since the last commit: `git diff <last_tag_name>` (you'll need to `git pull --tags` to get the remote tags)
 - Write release notes and add a link to them to the repo wiki's home page
