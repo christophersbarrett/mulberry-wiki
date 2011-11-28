@@ -4,3 +4,4 @@ How to upgrade from 0.1 to 0.2:
     * regions no longer use `containerType` property
     * regions now have a `type` property which can have the value of `row`, `column`, or `component` 
 * The `locations-map` template is now named `google-map-phone` and `google-map-tablet` as appropriate.
+* The pattern for the command line commands has changed; see [[Command Line Interface]]
