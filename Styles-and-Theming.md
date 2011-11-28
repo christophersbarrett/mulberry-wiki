@@ -2,23 +2,21 @@ Mulberry uses [Sass](http://sass-lang.com/) for CSS, which gives us a lot of too
 
 To begin styling your app, you need to define its theme. When you scaffold an app, by default it will get the -- you guessed it -- **default** theme. This is an ok starting point but not that exciting, so you’ll want to either tweak it by overriding some of the existing styles, or start from scratch and create a new theme. Either way, you do all your work in the themes folder. 
 
-### Tweaking an existing theme
-You’ll do this by overriding some styles in the default theme. Start by looking in the themes directory You should see this:
+### Tweaking the existing default theme
 
-    themes
-    - default
-      - custom.scss 
+When you scaffold an app it gives you a complete copy of the default theme in `themes/default`. If you don't want something drastically different, this is a good starting point that you can tweak as needed.  The starting point is `base.scss`. This is where you add your styles or import other files. The built in themes may change or be updated with bugfixes in the future, but since you're working on your own copy, you won't get them immediately. To get the latest themes, type 
 
-After mulberry has applied all the framework styles and the default theme, it will load
-custom.scss, which is where you can make any changes you want. If you want to make any drastic changes, you’ll be better off creating a new theme from scratch, otherwise, you’ll need to use a lot of !important declarations, which can be error-prone.
+    mulberry update_themes
+
+And it will overwrite any changes you have locally with the latest version. If you're using version control you should be able to merge the updates into your code without a problem.
 
 ### Creating a new theme
-To create a new theme, simply 
+While the default theme is an OK starting point, you'll probably want to create your own theme. To create a new theme from scratch, simply:
 
 * create a new directory in themes
-* create a `custom.scss` file in that directory
+* create a `base.scss` file in that directory
 * change the theme name in `_config.yml` to your theme’s directory
-* add your styles or import directives to `custom.scss` 
+* add your styles or import directives to `base.scss` 
 
 You can probably figure out how to style what you want by looking through the Web Inspector, but there are a few things you might want to know about how Mulberry markup that will be helpful.
 
