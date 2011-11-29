@@ -27,23 +27,23 @@ Create a file at `assets/data/<name>.yml`, which you can populate with custom da
 ### mulberry create feed \<name\>
 Create a file at `assets/feeds/<name>.yml`, which you can populate with information about an RSS feed to be included in your app.
 
-### mulberry create location <name>
+### mulberry create location \<name\>
 Create a file at `assets/locations/<name>.yml`, which you can populate with information about a geographic location to be included in your app.
 
 ## Code creation
 
 The following commands create code that can be used as the basis for adding custom functionality to your app.
 
-### mulberry create template <name>
+### mulberry create template \<name\>
 Create a file at `templates/<name>.yml`, which you can populate with information about the layout, components, and capabilities to be included in the template. [Read more about templates](https://github.com/Toura/mulberry/wiki/Page-Templates)
 
-### mulberry create component <name>
+### mulberry create component \<name\>
 Create a file at `javascript/components/<name>.js`, along with supporting Haml and CSS files for the component. [Read more about components](https://github.com/Toura/mulberry/wiki/Components)
 
-### mulberry create capability <name>
+### mulberry create capability \<name\>
 Create a file at `javascript/capabilities/<name>.js`, which you can populate with information about how components should interact on a given page. [Read more about capabilities](https://github.com/Toura/mulberry/wiki/Capabilities).
 
-### mulberry create datasource <name>
+### mulberry create datasource \<name\>
 Create a file at `javascript/data/<name>.js`, which you can populate with information about a remote datasource. **This option is under development.**
 
 ## Testing apps
