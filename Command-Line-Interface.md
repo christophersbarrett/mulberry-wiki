@@ -6,13 +6,13 @@ You can run `mulberry -v` from anywhere to find out which version of Mulberry yo
 
 ## Creating apps
 
-### mulberry scaffold <name>
+### mulberry scaffold \<name\>
 Create the skeleton of an app in a directory with the provided name. The provided directory should not exist prior to running this command.
 
 ### mulberry scaffold
 If run without a `<name>` argument, this command must be run from inside a Mulberry project. It will create any pages that are defined in the `sitemap.yml` file but that do not exist in a project's `pages` directory.
 
-### mulberry create page <name>
+### mulberry create page \<name\>
 Create a file at `pages/<pagename>.md` that contains the basic structure for defining a page.
 
 ## Asset creation
@@ -21,10 +21,10 @@ The following commands create assets that can be associated with pages in your a
 
 **Note that an asset must be associated with a page in order to be available in your app.**
 
-### mulberry create data <name>
+### mulberry create data \<name\>
 Create a file at `assets/data/<name>.yml`, which you can populate with custom data to be used by your app.
 
-### mulberry create feed <name>
+### mulberry create feed \<name\>
 Create a file at `assets/feeds/<name>.yml`, which you can populate with information about an RSS feed to be included in your app.
 
 ### mulberry create location <name>
