@@ -54,7 +54,7 @@ then the default is `%div`.
 
 ### Component Lifecycle Methods
 
-Mulberry's extensible component system offers a number of "lifecycle" methods, allowing you to control aspects of a component's behavior at various points. You can 
+Mulberry's extensible component system offers a number of "lifecycle" methods, allowing you to control aspects of a component's behavior at various points. 
 
 These methods run in order when a component is placed on a page. Here are those methods in the order in which they are called:
 
