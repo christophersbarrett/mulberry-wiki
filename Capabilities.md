@@ -2,7 +2,7 @@ Capabilities describe how two or more components that are present on a page shou
 
 Here is an example of a capability that defines the interaction between an Image Gallery and an Image Caption component:
 
-    toura.capability("ImageGallery_ImageCaption", {
+    mulberry.capability("ImageGallery_ImageCaption", {
       requirements : {
         imageGallery : 'ImageGallery',
         imageCaption : 'ImageCaption'
