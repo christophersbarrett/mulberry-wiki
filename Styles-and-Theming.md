@@ -4,7 +4,9 @@ To begin styling your app, you need to define its theme. When you scaffold an ap
 
 ### Tweaking the existing default theme
 
-When you scaffold an app it gives you a complete copy of the default theme in `themes/default`. If you don't want something drastically different, this is a good starting point that you can tweak as needed.  The starting point is `base.scss`. This is where you add your styles or import other files. The built in themes may change or be updated with bugfixes in the future, but since you're working on your own copy, you won't get them immediately. To get the latest themes, type 
+When you scaffold an app it gives you a complete copy of the default theme in `themes/default`. If you don't want something drastically different, this is a good starting point that you can tweak as needed. The starting point is `base.scss`, where you add your styles or import other files. If you just want to change some colors or fonts, you can modify those in the `_settings.scss` file.
+
+The built in themes may change or be updated with bugfixes in the future, but since you're working on your own copy, you won't get them immediately. To get the latest themes, type 
 
     mulberry update_themes
 
