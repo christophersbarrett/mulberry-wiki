@@ -101,7 +101,7 @@ Defined in `app/toura/app/Router.js`.
 
 Defines a custom route for the application. The route argument can be a string
 or a regular expression; for examples, see
-`toura_app/javascript/toura/app/Routes.js`. The handler argument is a
+`app/toura/app/Routes.js`. The handler argument is a
 function to be used to handle the route. It receives two arguments: a params
 object containing parameters contained in the URL, and an augmented route
 object with information about the route being run. The isDefault argument is
@@ -285,7 +285,7 @@ Subscriptions to this topic will run as soon as the device is ready. In a
 PhoneGap environment, this topic is triggered when the `deviceready` event
 fires; in a browser environment, this topic is triggered when the `body`
 element's `onload` event fires. *This is intended for internal use only, but it
-may prove useful to you.* Triggered in `toura_app/javascript/toura/base.js`.
+may prove useful to you.* Triggered in `app/toura/base.js`.
 
 ### /app/ready
 
