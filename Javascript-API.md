@@ -10,7 +10,7 @@ generally defined in the framework code as `toura.*`.
 
 ### mulberry.component(name, prototype)
 
-*Defined in: `toura_app/javascript/toura/components/_Component.js`.*
+*Defined in: `app/toura/components/_Component.js`.*
 
 Creates and returns a constructor for a
 component with the provided name using the provided prototye. The created
@@ -46,7 +46,7 @@ Here is an example of a component defined with mulberry.component:
 
 ### mulberry.capability(name, prototype)
 
-*Defined in: `toura_app/javascript/toura/capabilities/_Capability.js`*
+*Defined in: `app/toura/capabilities/_Capability.js`*
 
 Creates a capability, which can be added to a template definition to describe
 the interaction between components on a page. A capability created using
@@ -73,7 +73,7 @@ when WidgetA's `onWiggle` method is called:
 
 ### mulberry.datasource
 
-*Defined in: `toura_app/javascript/toura/Utilities.js`*
+*Defined in: `app/toura/Utilities.js`*
 
 Creats a datasource using the provided name and prototype. The datasource can
 be instantiated for application-wide use at application start by subscribing to
@@ -95,7 +95,7 @@ capabilities or components. In either case, the datasource is availalbe at
 
 ## Routing
 
-Defined in `toura_app/javascript/toura/app/Router.js`.
+Defined in `app/toura/app/Router.js`.
 
 ### mulberry.route(route, handler, isDefault)
 
@@ -130,7 +130,7 @@ Directs the application to go back one page.
 
 ## Page Creation
 
-*Defined in `toura_app/javascript/toura/app/PageFactory`*
+*Defined in `app/toura/app/PageFactory`*
 
 ### mulberry.app.PageFactory.createPage(pageData)
 
@@ -139,11 +139,11 @@ object. The object should include a `pageController` property to indicate which
 pre-defined template to use; if one is not provided, the Default template will
 be used. The entire `pageData` object will be available to all components on
 the page via their `baseObj` property. For usage examples, see
-`toura_app/javascript/toura/app/Routes.js`.
+`app/toura/app/Routes.js`.
 
 ## User Interface
 
-*Defined in `toura_app/javascript/toura/app/UI.js`*
+*Defined in `app/toura/app/UI.js`*
 
 ### mulberry.app.UI.showPage(page)
 
@@ -163,7 +163,7 @@ An object containing information about the current page.
 
 ### mulberry.app.PhoneGap.registerAPI(name, moduleFunction)
 
-*Defined in `toura_app/javascript/toura/app/PhoneGap.js`*
+*Defined in `app/toura/app/PhoneGap.js`*
 
 Creates an entry in the `mulberry.app.PhoneGap` namespace with the provided
 name, exposing the module that is returned when the moduleFunction is executed.
@@ -188,20 +188,20 @@ Here is an example:
 
 ### mulberry.app.PhoneGap.network
 
-*Defined in `toura_app/javascript/toura/app/PhoneGap/network.js`*
+*Defined in `app/toura/app/PhoneGap/network.js`*
 
 - `isReachable()` Returns a promise that will resolve true if a network is
   available; the promise resolves false otherwise.
 
 ### mulberry.app.PhoneGap.notification
 
-*Defined in `toura_app/javascript/toura/app/PhoneGap/notification.js`*
+*Defined in `app/toura/app/PhoneGap/notification.js`*
 
 - `alert()` Displays an alert notification.
 
 ### mulberry.app.PhoneGap.browser
 
-*Defined in `toura_app/javascript/toura/app/PhoneGap/browser.js`*
+*Defined in `app/toura/app/PhoneGap/browser.js`*
 
 - `url(url)` Opens a ChildBrowser at the specified URL.
 - `getBrowser()` Returns the ChildBrowser instance.
@@ -209,7 +209,7 @@ Here is an example:
 
 ## Config
 
-*Defined in `toura_app/javascript/toura/app/Config.js`*
+*Defined in `app/toura/app/Config.js`*
 
 ### mulberry.app.Config.get(key)
 
@@ -236,7 +236,7 @@ Clears *all* device storage, including SQLite and local storage.
 
 ## Utilities
 
-*Defined in `toura_app/javascript/toura/Utilities.js`.*
+*Defined in `app/toura/Utilities.js`.*
 
 ### mulberry.tmpl(string, dataObject)
 
@@ -292,38 +292,38 @@ may prove useful to you.* Triggered in `toura_app/javascript/toura/base.js`.
 Subscriptions to this topic will run as soon as the data for the application
 has been bootstrapped, but before the DOM has been populated.  *This topic is
 also intended for internal use only, but it may prove useful to you.*
-Triggered in `toura_app/javascript/toura/base.js`.
+Triggered in `app/toura/base.js`.
 
 ### /app/started
 
 Subscriptions to this topic will run once the initial view of the application
-has been displayed. Triggered in `toura_app/javascript/toura/base.js`.
+has been displayed. Triggered in `app/toura/base.js`.
 
 ### /router/handleHash/after
 
 Subscriptions to this topic will run once a change in the URL's hash has been
 handled; note that the new content may not yet be displayed at this time.
-Triggered in `toura_app/javascript/toura/app/Router.js`.
+Triggered in `app/toura/app/Router.js`.
 
 ### /node/view
 
 Subscriptions to this topic will run when any page specified via markdown is
 viewed; subscribers to this topic will receive an argument containing the URL
 of the page that was viewed. Triggered in
-`toura_app/javascript/toura/app/Routes.js`.
+`app/toura/app/Routes.js`.
 
 ### /window/resize
 
 Subscriptions to this topic will run whenever the window is resized. Triggered
-in `toura_app/javascript/toura/app/UI.js`.
+in `app/toura/app/UI.js`.
 
 ### /button/menu
 
 Subscriptions to this topic will run whenever a device's menu button is
-pressed. Triggered in `toura_app/javascript/toura/app/UI.js`.
+pressed. Triggered in `app/toura/app/UI.js`.
 
 ### /page/transition/end
 
 Subscriptions to this topic will run when the application is finished
 transitioning to a new page. Triggered in
-`toura_app/javascript/toura/containers/Pages.js`
+`app/toura/containers/Pages.js`
