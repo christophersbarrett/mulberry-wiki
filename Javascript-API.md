@@ -292,7 +292,7 @@ may prove useful to you.* Triggered in `app/toura/base.js`.
 Subscriptions to this topic will run as soon as the data for the application
 has been bootstrapped, but before the DOM has been populated.  *This topic is
 also intended for internal use only, but it may prove useful to you.*
-Triggered in `app/toura/base.js`.
+Triggered in `app/toura/app/Bootstrapper.js`.
 
 ### /app/started
 
