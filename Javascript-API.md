@@ -257,14 +257,31 @@ data object to populate the template, and return a string.
 
 ### mulberry.jsonp(url)
 
-Returns a promise that will resolve with the JSON returned from the provided URL.
+The `toura.jsonp` method returns a promise. It can take one or two arguments. 
 
-    var response = mulberry.jsonp('http://foo.com');
+- In the two-argument case, it should be passed a URL as the first argument, and a config object as the second argument. The config argument can have the standard Dojo XHR config properties.
+- In the one-argument case, the sole argument can be:
+  - A string URL, in which case the callback param name will default to "callback"
+  - A config object, in which case the config object must specify a `url` property
 
-    response.then(function(data) {
-      console.log(data);
-    });
+So, for example, the following are valid:
 
+```
+toura.jsonp('http://search.twitter.com/search.json?q=toura');
+
+toura.jsonp('http://search.twitter.com/search.json?q=toura', { 
+  load : function() {
+    console.log('success');
+  },
+  error : function() {
+    console.log('error');
+  }
+});
+
+toura.jsonp({
+  url : 'http://search.twitter.com/search.json?q=toura'
+});
+```
 
 ## Useful pub/sub topics
 
