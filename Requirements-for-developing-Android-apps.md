@@ -1,5 +1,3 @@
-## Creating Android Apps
-
 To build and run apps on Android Simulator, you must:
 
 - Have Apache ant installed (to find out whether you already have it, run
@@ -44,7 +42,7 @@ To build and run apps on Android Simulator, you must:
 - You do not need, but may choose, to install the Samples and Documentation.
   It's pretty useless and just takes up space.
 
-#### Creating an Android Virtual Device
+## Creating an Android Virtual Device
 
 If you do not have access to an Android device, you may want to create a
 virtual device for testing. To do this, run the SDK manager by running
