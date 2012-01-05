@@ -1,4 +1,4 @@
-# Introduction
+# Over the Air (OTA) Updates
 
 OTA (Over The Air) updates allow you to update the content of your application
 without submitting a new version of your app to the app store. With an OTA
