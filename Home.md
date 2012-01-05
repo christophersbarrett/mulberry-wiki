@@ -10,6 +10,8 @@
 - [[Command Line Interface]]
 - [[JavaScript API]]
 - [[Creating Custom Components]]
+- [[Requirements for Developing iOS Apps]]
+- [[Requirements for Developing Android Apps]]
 
 ## Understanding Mulberry
 - [[Pages and Assets]]
