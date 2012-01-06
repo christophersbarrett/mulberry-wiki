@@ -2,7 +2,7 @@ The Mulberry toolkit is made up of three distinct pieces of functionality: the M
 
 ## The Mulberry Application Framework
 
-Location: toura_app/
+Location: app/toura/
 
 The Mulberry Application Framework provides the underlying architecture for building applications that will work without the benefit of a remote server to serve up each page in the application — these types of applications are often referred to as “single-page applications.” 
 
