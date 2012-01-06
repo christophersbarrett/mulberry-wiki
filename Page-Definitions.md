@@ -1,4 +1,4 @@
-Each page in a Mulberry application is displayed using a page **definition**. You can use
+Each page in a Mulberry application is displayed using a **page definition**. You can use
 built-in page definitions, or create your own. To specify a page definition for a page, add a
 page definition property to the page's YAML header:
 
