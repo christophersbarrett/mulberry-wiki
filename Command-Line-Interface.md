@@ -38,7 +38,7 @@ Create a file at `assets/locations/<name>.yml`, which you can populate with info
 The following commands create code that can be used as the basis for adding custom functionality to your app.
 
 ### mulberry create page_def \<name\>
-Create a file at `page_defs/<name>.yml`, which you can populate with information about the layout, components, and capabilities to be used on a page. [Read more about page definitions](https://github.com/Toura/mulberry/wiki/Page-Templates)
+Create a file at `page_defs/<name>.yml`, which you can populate with information about the layout, components, and capabilities to be used on a page. [Read more about page definitions](https://github.com/Toura/mulberry/wiki/Page-Definitions)
 
 ### mulberry create component \<name\>
 Create a file at `javascript/components/<name>.js`, along with supporting Haml and CSS files for the component. [Read more about components](https://github.com/Toura/mulberry/wiki/Components)
