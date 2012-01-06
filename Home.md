@@ -16,7 +16,7 @@
 ## Understanding Mulberry
 - [[Pages and Assets]]
 - [[Components]]
-- [[Page Templates]]
+- [[Page Definitions]]
 - [[Styles and Theming]]
 - [[Capabilities]]
 - [[Feature Flags]]
