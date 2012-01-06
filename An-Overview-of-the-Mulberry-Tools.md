@@ -8,13 +8,13 @@ The Mulberry Application Framework provides the underlying architecture for buil
 
 ### Creating the User Interface
 
-In the framework, each page displays a unit of content; we refer to a unit of content as a “node.” Nodes are displayed using page templates, which specify the layout of the page, the components to be displayed on the page, and how the components should interact with the page and with each other. These interactions are described via “capabilities.”
+In the framework, each page displays a unit of content; we refer to a unit of content as a “node.” Nodes are displayed using page definitions, which specify the layout of the page, the components to be displayed on the page, and how the components should interact with the page and with each other. These interactions are described via “capabilities.”
 
-Template definitions are authored in YAML, which is compiled to JSON that can be parsed by the framework. When the framework displays a page, it combines the data about the node that is being displayed with the template definition that is associated with the node, and creates a page controller. The page controller is responsible for setting up the layout of the page, placing the components in the layout, providing the components with the data from the node, and brokering communication between the components.
+Page definitions are authored in YAML, which is compiled to JSON that can be parsed by the framework. When the framework displays a page, it combines the data about the node that is being displayed with the page definition that is associated with the node, and creates a page controller. The page controller is responsible for setting up the layout of the page, placing the components in the layout, providing the components with the data from the node, and brokering communication between the components.
 
-Each component encapsulates a unit of functionality, and components can be reused across multiple page templates. When a component receives data to display, it manipulates that data as required, and then uses the data to populate a template. The template is the DOM representation of the component. Once the DOM representation is created, a component can add event listeners to react to user interaction. A component can also expose an API of “setter” methods, allowing the page controller to send it new data as required. Ideally, components simply receive data and announce user interaction; they should not communicate directly with a remote resource, or with the data layer of the application. 
+Each component encapsulates a unit of functionality, and components can be reused across multiple page definitions. When a component receives data to display, it manipulates that data as required, and then uses the data to populate a page definition. The page definition is the DOM representation of the component. Once the DOM representation is created, a component can add event listeners to react to user interaction. A component can also expose an API of “setter” methods, allowing the page controller to send it new data as required. Ideally, components simply receive data and announce user interaction; they should not communicate directly with a remote resource, or with the data layer of the application. 
 
-The Mulberry application framework comes with a selection of built-in templates, components, and capabilities, but it also allows developers to author their own. Developers can create unique experiences by following clear patterns and using simple APIs, all without worrying about the underlying “plumbing” of their application. 
+The Mulberry application framework comes with a selection of built-in page definitions, components, and capabilities, but it also allows developers to author their own. Developers can create unique experiences by following clear patterns and using simple APIs, all without worrying about the underlying “plumbing” of their application. 
 
 
 ### Creating Custom Functionality
@@ -35,7 +35,7 @@ The CLI is a set of helpers that makes it easy to scaffold, develop, and test an
 
 - rapidly spin up a new application
 - create nodes and their associated resources and data
-- create skeleton files for page templates, components, and capabilities
+- create skeleton files for page definitions, components, and capabilities
 - serve the application locally for rapid in-browser iteration
 - create test builds that can run on simulators and (properly provisioned) devices
 - create production builds that can be submitted to app stores
