@@ -12,7 +12,6 @@
 - [[Creating Custom Components]]
 - [[Requirements for Developing iOS Apps]]
 - [[Requirements for Developing Android Apps]]
-- [[Over the Air Updates]]
 
 ## Understanding Mulberry
 - [[Pages and Assets]]
