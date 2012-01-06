@@ -1,55 +1,55 @@
-Each page in a Mulberry application is displayed using a page **template**. You can use
-built-in templates, or create your own. To specify a template for a page, add a
-template property to the page's YAML header:
+Each page in a Mulberry application is displayed using a page **definition**. You can use
+built-in page definitions, or create your own. To specify a template for a page, add a
+page definition property to the page's YAML header:
 
     ---
     title: My Page
-    template:
+    page_def:
       phone: default
       tablet: default
     ---
 
     My page's content is amazing.
 
-The template name is added as a class on the page's root element as a hook for
-styling. In this case we're using the `default` template for both phone and
+The page definition name is added as a class on the page's root element as a hook for
+styling. In this case we're using the `default` page definition for both phone and
 tablet. For really simple pages this might be ok, but most of the time you'll
 probably want your tablet pages to have a different layout. In that case, you'd
-specify different templates for each device type:
+specify different page definitions for each device type:
 
     ---
     title: My Image Page
-    template:
+    page_def:
       phone: image-gallery-phone
       tablet: image-gallery-tablet
     ---
 
     My images are amazing.
 
-If you specify a template that does not exist, the page will not be
-displayed in your app. If you do not specify a template, then the built-in
-`default` template will be used.
+If you specify a page definition that does not exist, the page will not be
+displayed in your app. If you do not specify a page definition, then the built-in
+`default` page definition will be used.
 
-## Creating Your Own Page Templates
+## Creating Your Own Page Definitions
 
-You can specify your own page templates using a simple YAML structure. Your
-templates can use Mulberry's built-in components and capabilities, or you can create
+You can specify your own page definitions using a simple YAML structure. Your
+page definitions can use Mulberry's built-in components and capabilities, or you can create
 your own custom components and capabilities.
 
 Mulberry can create the YAML skeleton for a new template for you:
 
-    mulberry create template my-template
+    mulberry create page_def my-pagedef
 
-This will create a file `my-template.yml` in your project's templates
+This will create a file `my-pagedef.yml` in your project's page_defs
 directory.
 
-A template consists of one or more **screens**; each screen contains one or more
-**regions** which are defined as either **columns** or **rows**; and each region contains one or more components. Regions can also contain other regions, allowing for complex layouts. Templates can also specify
+A page definition consists of one or more **screens**; each screen contains one or more
+**regions** which are defined as either **columns** or **rows**; and each region contains one or more components. Regions can also contain other regions, allowing for complex layouts. Page definitions can also specify
 interactions between components via **capabilities**.
 
 This is best explained with an example:
 
-    my-template:
+    my-pagedef:
       screens:
         - name: index
           regions:
@@ -70,10 +70,10 @@ Regions also have a few other options. Set `scrollable: true` to make the region
 
 If you need more control over the size of your regions (which you probably will), then you can handle that in the Sass for the template, explained in [[Styles and Theming]].
 
-## Built-In Page Templates
+## Built-In Page Definitions
 
-Mulberry comes with several built-in page templates. Any of these templates can be
-specified as the template for a page in the page file's YAML header.
+Mulberry comes with several built-in page definitions. Any of these page definitions can be
+specified as the page definition for a page in the page file's YAML header.
 
 ### audio-with-images-phone and audio-with-images-tablet
 
