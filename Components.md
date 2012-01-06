@@ -1,5 +1,5 @@
 Pages in Mulberry are displayed using a combination of components as specified by
-the page's template. Each component receives information about the page that is
+the page's page definition. Each component receives information about the page that is
 being displayed, as well as information about where on the page the component
 will be displayed.
 
@@ -19,7 +19,7 @@ built-in and custom components follow the same basic path:
 ## Built-In Components
 
 Mulberry comes with several built-in components that you can use in your own
-templates; they are located at `toura_app/javascript/toura/components/`. The
+page definitions; they are located at `toura_app/javascript/toura/components/`. The
 built-in components are described below, including the asset type(s) that the
 component works with. *Asset types* appear in italics. For more about the
 different asset types, see the Assets documentation.
@@ -68,13 +68,13 @@ links to the corresponding page.
 
 ### ColumnHeaderImage
 
-Displays the page's *header* image inside a column region (see the Page Templates
-documentation for more information on templates and regions).
+Displays the page's *header* image inside a column region (see the Page Definitions
+documentation for more information on page definitions and regions).
 
 ### DetailTitle
 
-Displays a title region on a detail screen (see the Page Templates
-documentation for more information on templates and screens), and exposes a
+Displays a title region on a detail screen (see the Page Definitions
+documentation for more information on page definitions and screens), and exposes a
 setter for setting the title. Announces user interaction with the close button.
 
 ### FeedItemDetail
