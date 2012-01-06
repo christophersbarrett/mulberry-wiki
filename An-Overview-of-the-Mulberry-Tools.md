@@ -2,7 +2,7 @@ The Mulberry toolkit is made up of three distinct pieces of functionality: the M
 
 ## The Mulberry Application Framework
 
-Location: `app/toura/`
+Location: `app`
 
 The Mulberry Application Framework provides the underlying architecture for building applications that will work without the benefit of a remote server to serve up each page in the application — these types of applications are often referred to as “single-page applications.” 
 
@@ -29,7 +29,7 @@ In addition to providing clear patterns for creating and connecting user interfa
 
 ## The Mulberry Command Line Interface (CLI)
 
-Location: mulberry/bin/mulberry
+Location: `cli/bin/mulberry`
 
 The CLI is a set of helpers that makes it easy to scaffold, develop, and test an application. Specifically, it provides the ability to 
 
@@ -42,12 +42,12 @@ The CLI is a set of helpers that makes it easy to scaffold, develop, and test an
 
 ## The Mulberry Builder
 
-Location: lib/builder.rb
+Location: `builder.rb`
 
 The Mulberry Builder takes content and customizations from a given “content source,” and combines it with the Mulberry Application Framework to create a functional application for a specified target environment (referred to as the “build target”). 
 
-A Mulberry project — as created by the Mulberry CLI — is one example of a content source, but the builder can consume any content source that exposes an interface via a Build Helper. A Build Helper must provide an interface as defined by the base Build::BuildHelper class (lib/builder/build_helper.rb). This interface allows the Builder to interrogate the Build Helper in order to access the content and customizations provided by the content source.
+A Mulberry project — as created by the Mulberry CLI — is one example of a content source, but the builder can consume any content source that exposes an interface via a Build Helper. A Build Helper must provide an interface as defined by the base Build::BuildHelper class (`builder/build_helper.rb`). This interface allows the Builder to interrogate the Build Helper in order to access the content and customizations provided by the content source.
 
-Separately, the Builder must be provided with information about the target environment for which it is building the application. Based on that information, the builder creates a project directory using a project template (lib/builder/project_templates/), and then populates the project directory with the Mulberry Application Framework files and the content and customizations from the content source. 
+Separately, the Builder must be provided with information about the target environment for which it is building the application. Based on that information, the builder creates a project directory using a project template (`builder/project_templates/`), and then populates the project directory with the Mulberry Application Framework files and the content and customizations from the content source. 
 
 The output of the Builder is a project directory that can be compiled if necessary, and then executed in the target environment. 
