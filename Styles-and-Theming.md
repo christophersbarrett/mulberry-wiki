@@ -24,15 +24,15 @@ You can probably figure out how to style what you want by looking through the We
 
 ### Pages, Screens, Regions and Components
 
-These are the building blocks of a Mulberry app. You’ve already seen references to them in the template definitions, but here’s what it means for styling. Mulberry takes a template definition and constructs consistent markup with helpful hooks for styling whichever part of your app you need to. For instance the page template definition classname gets added to the page’s root element, so if you want to apply a style to pages with that template, it’s no problem:
+These are the building blocks of a Mulberry app. You’ve already seen references to them in the page definitions, but here’s what it means for styling. Mulberry takes a page definition and constructs consistent markup with helpful hooks for styling whichever part of your app you need to. For instance the page definition classname gets added to the page’s root element, so if you want to apply a style to pages with that page definition, it’s no problem:
 
-    .page.my-template {
+    .page.my-page-def {
       color: green;
     }
 
 Pages contain screens, which also contain their name as a class: 
 
-    .page.my-template {
+    .page.my-page-def {
       color: MidnightBlue;
       
       .screen.index {
@@ -40,9 +40,9 @@ Pages contain screens, which also contain their name as a class:
       }
     }
 
-And lastly there are regions (columns and rows), which can be selected either based on the className you assign to them in the page template (optional in the template definition) or based on their position in the template.
+And lastly there are regions (columns and rows), which can be selected either based on the className you assign to them in the page definition (optional in the template definition) or based on their position in the page definition.
 
-    .page.my-template {
+    .page.my-page-def {
       color: green;
       
       .screen.index {
@@ -61,7 +61,7 @@ And lastly there are regions (columns and rows), which can be selected either ba
     }
 
 ### Components
-You probably don’t want to put too many styles for your components within the page template styles, because you want the component styles to be reused no matter what page it’s placed in. So component styles are best handled separately, although the conventions are similar. Say we want to style the ImageGallery component. 
+You probably don’t want to put too many styles for your components within the page definition styles, because you want the component styles to be reused no matter what page it’s placed in. So component styles are best handled separately, although the conventions are similar. Say we want to style the ImageGallery component. 
 
     .component.image-gallery {
       background-color: LemonChiffon;
