@@ -12,7 +12,7 @@
 - [[Creating Custom Components]]
 - [[Requirements for Developing iOS Apps]]
 - [[Requirements for Developing Android Apps]]
-- [Over the Air Updates](https://github.com/Toura/mulberry/wiki/Over-the-Air-(OTA)-Updates)
+- [Over the Air Updates](https://github.com/Toura/mulberry/wiki/Over-the-Air-\(OTA\)-Updates)
 
 ## Understanding Mulberry
 - [[Pages and Assets]]
