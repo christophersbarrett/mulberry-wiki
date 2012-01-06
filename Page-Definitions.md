@@ -1,5 +1,5 @@
 Each page in a Mulberry application is displayed using a page **definition**. You can use
-built-in page definitions, or create your own. To specify a template for a page, add a
+built-in page definitions, or create your own. To specify a page definition for a page, add a
 page definition property to the page's YAML header:
 
     ---
@@ -36,7 +36,7 @@ You can specify your own page definitions using a simple YAML structure. Your
 page definitions can use Mulberry's built-in components and capabilities, or you can create
 your own custom components and capabilities.
 
-Mulberry can create the YAML skeleton for a new template for you:
+Mulberry can create the YAML skeleton for a new page definition (page_def to save you some typing) for you:
 
     mulberry create page_def my-pagedef
 
@@ -103,7 +103,7 @@ Favorites pages.
 Displays the images associated with a page in a swipeable image gallery;
 selecting an image in the image gallery opens a larger view of the image,
 which can be panned and zoomed. If an image has a caption, it will be
-displayed when the associated image is displayed. This template also displays
+displayed when the associated image is displayed. This page definition also displays
 the page text and links to subpages, if any.
 
 ### full-screen-images
