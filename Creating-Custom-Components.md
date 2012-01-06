@@ -1,5 +1,5 @@
 Mulberry exposes a simple API for creating custom components that you can use on
-your own page templates. This section explains how you might create a simple
+your own page definitions. This section explains how you might create a simple
 component for displaying a Twitter feed.
 
 To start, run the following command from your app directory:
