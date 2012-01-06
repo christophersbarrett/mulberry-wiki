@@ -1,6 +1,6 @@
 With the exception of `mulberry scaffold <name>`, Mulberry commands must be run from inside a directory that contains a Mulberry project. 
 
-**The location of the `mulberry/bin/mulberry` file must be in your $PATH in order for any of these commands to work!**
+**The location of the `cli/bin/mulberry` file must be in your $PATH in order for any of these commands to work!**
 
 You can run `mulberry -v` from anywhere to find out which version of Mulberry you are currently running.
 
