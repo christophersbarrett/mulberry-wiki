@@ -22,7 +22,9 @@ look like when you're done:
 
     ---
     title: Speakers
-    template: Images
+    page_def: 
+      phone: images-and-text-phone
+      tablet: images-and-text-tablet
     images:
       - pamela-fox.png
       - alex-sexton.png
@@ -88,7 +90,9 @@ the page's YAML header:
 
     ---
     title: Speakers
-    template: Images1
+    page_def: 
+      phone: images-and-text-phone
+      tablet: images-and-text-tablet
     images:
       - pamela-fox.png
       - alex-sexton.png
@@ -135,7 +139,9 @@ YAML header:
 
     ---
     title: News
-    template: FeedList
+    page_def: 
+      phone: feed-list-tablet
+      tablet: feed-list-phone
     feeds:
       - cnn.yml
     ---
