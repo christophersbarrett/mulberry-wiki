@@ -1,12 +1,12 @@
 Mulberry uses [Sass](http://sass-lang.com/) for CSS, which gives us a lot of tools for keeping our code DRY, but since we use the **scss** syntax, you can write all your code in plain CSS if that’s what you’re more comfortable with.
 
-To begin styling your app, you need to define its theme. When you scaffold an app, by default it will get the -- you guessed it -- **default** theme. This is an ok starting point but not that exciting, so you’ll want to either tweak it by overriding some of the existing styles, or start from scratch and create a new theme. Either way, you do all your work in the themes folder. 
+To begin styling your app, you need to define its theme. When you scaffold an app, by default it will get the -- you guessed it -- **default** theme. This is an ok starting point but not that exciting, so you’ll want to either tweak it by overriding some of the existing styles, or start from scratch and create a new theme. Either way, you do all your work in the themes folder.
 
 ### Tweaking the existing default theme
 
 When you scaffold an app it gives you a complete copy of the default theme in `themes/default`. If you don't want something drastically different, this is a good starting point that you can tweak as needed. The starting point is `base.scss`, where you add your styles or import other files. If you just want to change some colors or fonts, you can modify those in the `_settings.scss` file.
 
-The built in themes may change or be updated with bugfixes in the future, but since you're working on your own copy, you won't get them immediately. To get the latest themes, type 
+The built in themes may change or be updated with bugfixes in the future, but since you're working on your own copy, you won't get them immediately. To get the latest themes, type
 
     mulberry update_themes
 
@@ -18,7 +18,7 @@ While the default theme is an OK starting point, you'll probably want to create 
 * create a new directory in themes
 * create a `base.scss` file in that directory
 * change the theme name in `_config.yml` to your theme’s directory
-* add your styles or import directives to `base.scss` 
+* add your styles or import directives to `base.scss`
 
 You can probably figure out how to style what you want by looking through the Web Inspector, but there are a few things you might want to know about how Mulberry markup that will be helpful.
 
@@ -30,30 +30,30 @@ These are the building blocks of a Mulberry app. You’ve already seen reference
       color: green;
     }
 
-Pages contain screens, which also contain their name as a class: 
+Pages contain screens, which also contain their name as a class:
 
     .page.my-page-def {
       color: MidnightBlue;
-      
+
       .screen.index {
         background-color: LightGoldenrodYellow;
       }
     }
 
-And lastly there are regions (columns and rows), which can be selected either based on the className you assign to them in the page definition (optional in the template definition) or based on their position in the page definition.
+And lastly there are regions, which can be selected either based on the className you assign to them in the page definition (optional in the template definition) or based on their position in the page definition.
 
     .page.my-page-def {
       color: green;
-      
+
       .screen.index {
         background-color: orange;
-        
-        .row.header {
+
+        .region.header {
           height: 60px;
         }
 
-        > .row.nth-child(2) {
-          > .column.first-child {
+        > .region.nth-child(2) {
+          > .region:first-child {
             width: 200px;
           }
         }
@@ -61,20 +61,20 @@ And lastly there are regions (columns and rows), which can be selected either ba
     }
 
 ### Components
-You probably don’t want to put too many styles for your components within the page definition styles, because you want the component styles to be reused no matter what page it’s placed in. So component styles are best handled separately, although the conventions are similar. Say we want to style the ImageGallery component. 
+You probably don’t want to put too many styles for your components within the page definition styles, because you want the component styles to be reused no matter what page it’s placed in. So component styles are best handled separately, although the conventions are similar. Say we want to style the ImageGallery component.
 
     .component.image-gallery {
       background-color: LemonChiffon;
     }
 
-### Hiding and Showing Components and Elements 
+### Hiding and Showing Components and Elements
 One of the most common UI style actions is simply hiding and showing something depending on user input. By default every component and ever element within a component has a `hidden` class which specifies how you want that element to be hidden when the `_Component::hide` method is called. By default it’s simply `display:none`. But by overriding the `hidden` class you can use CSS transforms to give things a little more flair.
 
     .component.my-component {
       .something-cool {
         opacity: 1;
         -webkit-transition: opacity .3s ease-in;
-        
+
         &.hidden {
           opacity: 0;
           display: block !important;

@@ -1,6 +1,9 @@
-Each page in a Mulberry application is displayed using a **page definition**. You can use
-built-in page definitions, or create your own. To specify a page definition for a page, add a
-page definition property to the page's YAML header:
+Each page in a Mulberry application is displayed using a **page_def **. Keep in
+mind that this is different than a **page**. A **page** is a markdown file
+which contains your content for the page. A **page_def** defines what Mulberry
+will do with that content. There are lots of built in page_defs that you can
+use, or you can create your own. To specify a page_def for a page, add a
+page_def property to the page's YAML header:
 
     ---
     title: My Page
@@ -11,11 +14,11 @@ page definition property to the page's YAML header:
 
     My page's content is amazing.
 
-The page definition name is added as a class on the page's root element as a hook for
-styling. In this case we're using the `default` page definition for both phone and
+The page_def name is added as a class on the page's root element as a hook for
+styling. In this case we're using the `default` page_def for both phone and
 tablet. For really simple pages this might be ok, but most of the time you'll
 probably want your tablet pages to have a different layout. In that case, you'd
-specify different page definitions for each device type:
+specify different page_defs for each device type:
 
     ---
     title: My Image Page
@@ -26,25 +29,25 @@ specify different page definitions for each device type:
 
     My images are amazing.
 
-If you specify a page definition that does not exist, the page will not be
-displayed in your app. If you do not specify a page definition, then the built-in
-`default` page definition will be used.
+If you specify a page_def that does not exist, the page will not be
+displayed in your app. If you do not specify a page_def, then the built-in
+`default` page_def will be used.
 
-## Creating Your Own Page Definitions
+## Creating Your Own page_defs
 
-You can specify your own page definitions using a simple YAML structure. Your
-page definitions can use Mulberry's built-in components and capabilities, or you can create
+You can specify your own page_defs using a simple YAML structure. Your
+page_defs can use Mulberry's built-in components and capabilities, or you can create
 your own custom components and capabilities.
 
-Mulberry can create the YAML skeleton for a new page definition (page_def to save you some typing) for you:
+Mulberry can create the YAML skeleton for a new page_def (page_def to save you some typing) for you:
 
     mulberry create page_def my-pagedef
 
 This will create a file `my-pagedef.yml` in your project's page_defs
 directory.
 
-A page definition consists of one or more **screens**; each screen contains one or more
-**regions** which are defined as either **columns** or **rows**; and each region contains one or more components. Regions can also contain other regions, allowing for complex layouts. Page definitions can also specify
+A page_def consists of one or more **screens**; each screen contains one or more
+**regions** which are defined as either **columns** or **rows**; and each region contains one or more components. Regions can also contain other regions, allowing for complex layouts. page_defs can also specify
 interactions between components via **capabilities**.
 
 This is best explained with an example:
@@ -65,15 +68,15 @@ This is best explained with an example:
 
 Regions also have a few other options. Set `scrollable: true` to make the region scrollable. The `size` option defines how the region will determine its size. It has two possible values:
 
-* `flex`: [default] the region will take up as much space as it can. Multiple regions within the same container will all take up equal amount of space. 
+* `flex`: [default] the region will take up as much space as it can. Multiple regions within the same container will all take up equal amount of space.
 * `fixed`: the region will take the size of its contents -- no more, no less.
 
 If you need more control over the size of your regions (which you probably will), then you can handle that in the Sass for the template, explained in [[Styles and Theming]].
 
-## Built-In Page Definitions
+## Built-In page_defs
 
-Mulberry comes with several built-in page definitions. Any of these page definitions can be
-specified as the page definition for a page in the page file's YAML header.
+Mulberry comes with several built-in page_defs. Any of these page_defs can be
+specified as the page_def for a page in the page file's YAML header.
 
 ### audio-with-images-phone and audio-with-images-tablet
 
@@ -103,7 +106,7 @@ Favorites pages.
 Displays the images associated with a page in a swipeable image gallery;
 selecting an image in the image gallery opens a larger view of the image,
 which can be panned and zoomed. If an image has a caption, it will be
-displayed when the associated image is displayed. This page definition also displays
+displayed when the associated image is displayed. This page_def also displays
 the page text and links to subpages, if any.
 
 ### full-screen-images
