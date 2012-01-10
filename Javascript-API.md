@@ -139,7 +139,7 @@ Directs the application to go back one page.
 
 *Defined in `app/toura/app/PageFactory`*
 
-### mulberry.app.PageFactory.createPage(pageData)
+### mulberry.createPage(pageData)
 
 Directs the application to construct a page based on the provided `pageData`
 object. The object should include a `pageDef` property to indicate which
@@ -152,7 +152,7 @@ the page via their `baseObj` property. For usage examples, see
 
 *Defined in `app/toura/app/UI.js`*
 
-### mulberry.app.UI.showPage(page)
+### mulberry.showPage(page)
 
 Places the provided page object in the user interface, and transitions from the
 old page to the new page.
