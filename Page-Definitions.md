@@ -46,9 +46,12 @@ Mulberry can create the YAML skeleton for a new page_def (page_def to save you s
 This will create a file `my-pagedef.yml` in your project's page_defs
 directory.
 
-A page_def consists of one or more **screens**; each screen contains one or more
-**regions** which are defined as either **columns** or **rows**; and each region contains one or more components. Regions can also contain other regions, allowing for complex layouts. page_defs can also specify
-interactions between components via **capabilities**.
+A page_def consists of one or more **screens**; each screen contains one or
+more **regions** which will usually be styled as either columns or rows; and
+each region contains one or more components. To make a region scrollable, set
+`scrollable: true`. Regions can also contain other regions, allowing for
+complex layouts. page_defs can also specify interactions between components via
+**capabilities**.
 
 This is best explained with an example:
 
@@ -56,22 +59,38 @@ This is best explained with an example:
       screens:
         - name: index
           regions:
-            - type: row
-              size: fixed
+            - className: page-nav
               components:
                 - PageNav
-            - type: row
-              scrollable: true
+            - scrollable: true
               components:
                 - PageHeaderImage
                 - BodyText
 
-Regions also have a few other options. Set `scrollable: true` to make the region scrollable. The `size` option defines how the region will determine its size. It has two possible values:
+The most common use for a region is to style it as a column or row. Mulberry
+provides a few Sass mixins to help with that.
 
-* `flex`: [default] the region will take up as much space as it can. Multiple regions within the same container will all take up equal amount of space.
-* `fixed`: the region will take the size of its contents -- no more, no less.
+flex-row-container [TODOC]
 
-If you need more control over the size of your regions (which you probably will), then you can handle that in the Sass for the template, explained in [[Styles and Theming]].
+flex-column-container [TODOC]
+
+flex-region [TODOC]
+
+fixed-flex-region [TODOC]
+
+Each page_def has it's  own scss file in the `themes/<theme name>/page_defs` directory where you handle the page layout.
+
+    .page.my-pagedef {
+      .screen.index {
+        @include flex-row-container;
+
+        .region.page-nav {
+          @include fixed-flex-region;
+        }
+      }
+    }
+
+If you want to do more complex layouts, that's explained in [[Styles and Theming]].
 
 ## Built-In page_defs
 
