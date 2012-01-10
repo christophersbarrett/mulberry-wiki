@@ -115,6 +115,13 @@ objects. Each object must have a `route` and a `handler` property; each
 object may optionally include an `isDefault` property. These properties work
 just like the arguments to `mulberry.route`.
 
+### mulberry.page(route, pageObject)
+
+A shorthand method for defining a route. The provided page object will be mixed
+in with any params from the route, and will then be used to create and display
+a page. The `pageObject` argument must be an object, and must include a
+`pageDef` property that indicates the page definition to be used.
+
 ### mulberry.app.Router.go(hash)
 
 Directs the application to go to the specified hash.
@@ -135,7 +142,7 @@ Directs the application to go back one page.
 ### mulberry.app.PageFactory.createPage(pageData)
 
 Directs the application to construct a page based on the provided `pageData`
-object. The object should include a `pageController` property to indicate which
+object. The object should include a `pageDef` property to indicate which
 pre-defined template to use; if one is not provided, the Default template will
 be used. The entire `pageData` object will be available to all components on
 the page via their `baseObj` property. For usage examples, see
@@ -257,7 +264,7 @@ data object to populate the template, and return a string.
 
 ### mulberry.jsonp(url)
 
-The `toura.jsonp` method returns a promise. It can take one or two arguments. 
+The `toura.jsonp` method returns a promise. It can take one or two arguments.
 
 - In the two-argument case, it should be passed a URL as the first argument, and a config object as the second argument. The config argument can have the standard Dojo XHR config properties.
 - In the one-argument case, the sole argument can be:
@@ -269,7 +276,7 @@ So, for example, the following are valid:
 ```
 toura.jsonp('http://search.twitter.com/search.json?q=toura');
 
-toura.jsonp('http://search.twitter.com/search.json?q=toura', { 
+toura.jsonp('http://search.twitter.com/search.json?q=toura', {
   load : function() {
     console.log('success');
   },
