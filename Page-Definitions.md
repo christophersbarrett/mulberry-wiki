@@ -67,7 +67,19 @@ This is best explained with an example:
                 - PageHeaderImage
                 - BodyText
 
-If you want to do more complex layouts, that's explained in [[Styles and Theming]].
+Each page_def has it's  own scss file in the `themes/<theme name>/page_defs` directory where you handle the page layout. Mulberry provides a few helpful Sass mixins to handle common row/column layouts:
+
+    .page.my-pagedef {
+      .screen.index {
+        @include flex-row-container;
+
+        .region.page-nav {
+          @include fixed-flex-region;
+        }
+      }
+    }
+
+Layouts are more fully explained in [[Styles and Theming]].
 
 ## Built-In page_defs
 
