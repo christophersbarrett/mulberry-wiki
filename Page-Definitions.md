@@ -1,4 +1,4 @@
-Each page in a Mulberry application is displayed using a **page_def **. Keep in
+Each page in a Mulberry application is displayed using a **page_def**. Keep in
 mind that this is different than a **page**. A **page** is a markdown file
 which contains your content for the page. A **page_def** defines what Mulberry
 will do with that content. There are lots of built in page_defs that you can
