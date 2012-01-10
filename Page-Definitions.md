@@ -44,7 +44,7 @@ Mulberry can create the YAML skeleton for a new page_def (page_def to save you s
     mulberry create page_def my-pagedef
 
 This will create a file `my-pagedef.yml` in your project's page_defs
-directory.
+directory and `my-pagedef.scss` in your project's `themes/<my theme>/page_defs` directory.
 
 A page_def consists of one or more **screens**; each screen contains one or
 more **regions** which will usually be styled as either columns or rows; and
@@ -66,29 +66,6 @@ This is best explained with an example:
               components:
                 - PageHeaderImage
                 - BodyText
-
-The most common use for a region is to style it as a column or row. Mulberry
-provides a few Sass mixins to help with that.
-
-flex-row-container [TODOC]
-
-flex-column-container [TODOC]
-
-flex-region [TODOC]
-
-fixed-flex-region [TODOC]
-
-Each page_def has it's  own scss file in the `themes/<theme name>/page_defs` directory where you handle the page layout.
-
-    .page.my-pagedef {
-      .screen.index {
-        @include flex-row-container;
-
-        .region.page-nav {
-          @include fixed-flex-region;
-        }
-      }
-    }
 
 If you want to do more complex layouts, that's explained in [[Styles and Theming]].
 
