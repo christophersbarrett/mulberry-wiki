@@ -26,7 +26,7 @@
 - [[0.1.1 Release Notes]]
 - [[0.2 Release Notes]]
 - [[0.next Release Notes]] (These are changes that are on master; they may or may not be incorporated into the next release.)
-- [[Upgrade 0.1 to 0.2]]
+- [[Upgrading]]
 
 ## Developer Notes
 
