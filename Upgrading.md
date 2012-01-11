@@ -1,4 +1,4 @@
-from 0.1 to 0.2:
+## From 0.1 to 0.2:
 
 * The template definition yaml format [changed](https://github.com/Toura/mulberry/pull/91). Any custom templates should be updated:
     * regions no longer use `containerType` property
@@ -7,7 +7,8 @@ from 0.1 to 0.2:
 * The `locations-map` template is now named `google-map-phone` and `google-map-tablet` as appropriate.
 * The pattern for the command line commands has changed; see [[Command Line Interface]]
 
-from 0.2 to 0.3:
+## From 0.2 to 0.3:
+
 * Theming changes: To get the changes, run `mulberry update_themes` and resolve any conflicts manually 
   * Icons have been moved to `themes/default/resources/icons`. 
   * All colors have been extracted to `themes/default/_settings.scss`
