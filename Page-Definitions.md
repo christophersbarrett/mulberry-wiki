@@ -1,4 +1,4 @@
-Each page in a Mulberry application is displayed using a **page_def** which defines what components will be used to render the page and how they will interact. Mulberry comes with a set of built in page_defs that you can
+Each page in a Mulberry application is displayed using a **Page Definition** (or as used in the code: **page_def**) which defines what components will be used to render the page and how they will interact. Mulberry comes with a set of built in page_defs that you can
 use, or you can create your own. To specify a page_def for a page, add a
 `page_def` property to the page's YAML header:
 
@@ -36,7 +36,7 @@ You can specify your own page_defs using a simple YAML structure. Your
 page_defs can use Mulberry's built-in components and capabilities, or you can create
 your own custom components and capabilities.
 
-Mulberry can create the YAML skeleton for a new page_def (page_def to save you some typing) for you:
+Mulberry can create the YAML skeleton for a new page_def for you:
 
     mulberry create page_def my-pagedef
 
