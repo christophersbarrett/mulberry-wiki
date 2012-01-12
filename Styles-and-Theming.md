@@ -24,7 +24,7 @@ You can probably figure out how to style what you want by looking through the We
 
 ### Pages, Screens, Regions and Components
 
-These are the building blocks of a Mulberry app. You’ve already seen references to them in the page definitions, but here’s what it means for styling. Mulberry takes a page definition and constructs consistent markup with helpful hooks for styling whichever part of your app you need to. For instance the page definition classname gets added to the page’s root element, so if you want to apply a style to pages with that page definition, it’s no problem:
+These are the building blocks of a Mulberry app. You’ve already seen references to them in the [[page definitions]], but here’s what it means for styling. Mulberry takes a page definition and constructs consistent markup with helpful hooks for styling whichever part of your app you need to. For instance the page definition classname gets added to the page’s root element, so if you want to apply a style to pages with that page definition, it’s no problem:
 
     .page.my-page-def {
       color: green;
