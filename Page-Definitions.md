@@ -1,9 +1,6 @@
-Each page in a Mulberry application is displayed using a **page_def**. Keep in
-mind that this is different than a **page**. A **page** is a markdown file
-which contains your content for the page. A **page_def** defines what Mulberry
-will do with that content. There are lots of built in page_defs that you can
+Each page in a Mulberry application is displayed using a **page_def** which defines what components will be used to render the page and how they will interact. Mulberry comes with a set of built in page_defs that you can
 use, or you can create your own. To specify a page_def for a page, add a
-page_def property to the page's YAML header:
+`page_def` property to the page's YAML header:
 
     ---
     title: My Page
@@ -67,7 +64,7 @@ This is best explained with an example:
                 - PageHeaderImage
                 - BodyText
 
-Each page_def has it's  own scss file in the `themes/<theme name>/page_defs` directory where you handle the page layout. Mulberry provides a few helpful Sass mixins to handle common row/column layouts:
+Each page_def has it's own scss file in the `themes/<theme name>/page_defs` directory where you handle the page layout. Mulberry provides a few helpful Sass mixins to handle common row/column layouts:
 
     .page.my-pagedef {
       .screen.index {
