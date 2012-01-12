@@ -69,6 +69,30 @@ Usually, you'll need to lay out your regions in columns and rows, so Mulberry pr
   * `flex-region(<proportion>)`: Used for child elements of `flex-row-container` and `flex-column-container`, but allows you to specify the proportion of space the region should take up.
   * `fixed-flex-region`: Defines fixed-size region within a flex-box container.
 
+Here's how they might be used to create a screen with a fixed-size header, with some columns underneath:
+
+    .page.my-page-def {
+      color: green;
+
+      .screen.index {
+        @include flex-row-container;
+        background-color: orange;
+
+        .region.header {
+          @include fixed-flex-region;
+          height: 60px;
+        }
+
+        > .region.nth-child(2) {
+          @include flex-column-container;
+
+          > .region:first-child {
+            width: 200px;
+          }
+        }
+      }
+    }
+
 ### Components
 You probably don’t want to put too many styles for your components within the page definition styles, because you want the component styles to be reused no matter what page it’s placed in. So component styles are best handled separately, although the conventions are similar. Say we want to style the ImageGallery component.
 
