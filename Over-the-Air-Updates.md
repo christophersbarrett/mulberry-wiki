@@ -3,7 +3,7 @@
 OTA (Over The Air) updates allow you to update the content of your application
 without submitting a new version of your app to the app store. With an OTA
 update you can change the text on pages, add new assets, even change the
-sitemap for your application -- all without having to wait for app your to be
+sitemap for your application -- all without having to wait for your app to be
 approved before users can receive it.
 
 To help you get a big picture understanding of how OTA's work, and the
