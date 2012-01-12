@@ -93,7 +93,7 @@ receive the content update before the app store version of the app is ready
 (Devices A and B). Device A above gets the OTA, but for whatever reason does
 not install the app store update; it still gets the benefit of the new content.
 Device C, though it was OTA-enabled, did not get the OTA for whatever reason
-(maybe the user just never used it during the time period between between app
+(maybe the user just never used it during the time period between the app
 store submission and approval), but still gets the content update bundled along
 with the new app store version when it installs it.
 
