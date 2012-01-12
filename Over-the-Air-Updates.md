@@ -100,7 +100,7 @@ with the new app store version when it installs it.
 **Note: The OTA does not distribute JavaScript source code, only content. If
 the nature of the change to your app's content is such that only the newer
 version of the source code is able to process it without breaking, then the
-receivers of the this OTA (Devices A and B) could be stuck for weeks with a
+receivers of the OTA (Devices A and B) could be stuck for weeks with a
 broken app and no way to fix it.**
 
 ## OTA with Existing App, Publish on Approval
