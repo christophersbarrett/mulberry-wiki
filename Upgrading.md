@@ -9,7 +9,10 @@
 
 ## From 0.2 to 0.3:
 
-* Theming changes: To get the changes, run `mulberry update_themes` and resolve any conflicts manually 
+* `templates` are now called `page_defs`
+  * Rename the `templates` directory to `page_defs`
+  * In all your page markdown files, change `template` to `page_def`
+* Theming changes: To get the changes, run `mulberry update_themes` and resolve any conflicts manually
   * Icons have been moved to `themes/default/resources/icons`. 
   * All colors have been extracted to `themes/default/_settings.scss`
   * Instead of defining layout in page_def yaml files, use mixins in page_def scss files
