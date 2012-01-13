@@ -8,6 +8,7 @@
 * The pattern for the command line commands has changed; see [[Command Line Interface]]
 
 ## From 0.2 to 0.3:
+* The command line utility has moved from `/mulberry/bin/mulberry` to `/cli/bin/mulberry`. Update your $PATH to the new location.
 * Upgrade to PhoneGap 1.3
   * If you're developing for iOS, download [PhoneGap](http://phonegap.com/download/) and run the iOS installer
 * `templates` are now called `page_defs`
