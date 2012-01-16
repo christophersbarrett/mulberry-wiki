@@ -55,10 +55,7 @@ Mulberry code strips trailing whitespace from all lines.
 If you use vim, you may want to put something like the following in your
 `.vimrc` file.
 
-    function! StripWhitespace ()
-        exec ':%s/ \+$//gc'
-    endfunction
-    noremap <leader>ss :call StripWhitespace ()<CR>
+    autocmd BufWritePre * :%s/\s\+$//e
 
 Other text editors should provide options for enabling this by default as well.
 
