@@ -35,3 +35,4 @@ These are resources for people who want to contribute to the Mulberry project.
 
 - [[Upgrading to new PhoneGap versions]]
 - [[Release Checklist]]
+- [[JavaScript Coding Guidelines]]
