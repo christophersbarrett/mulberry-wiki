@@ -1,5 +1,3 @@
-# JavaScript Style Guide
-
 *This document, especially its structure, owes heavily to the [jQuery Core
 Style Guide](http://docs.jquery.com/JQuery_Core_Style_Guidelines).*
 
