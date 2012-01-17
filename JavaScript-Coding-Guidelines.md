@@ -9,16 +9,19 @@ JavaScript code published as part of an "official" Mulberry demo.
 With the exception of some vendor files, the Mulberry code passes JSHint with
 the following settings:
 
-    jsl = JSLint.new(
-      :undef => false,
-      :strict => false,
-      :nomen => false,
-      :onevar => false,
-      :newcap => false,
-      :regexp => false,
-      :plusplus => false,
-      :linter => 'jshint'
-    )
+```
+:curly      =>  true,
+:bitwise    =>  true,
+:eqeqeq     =>  true,
+:immed      =>  true,
+:latedef    =>  true,
+:noempty    =>  true,
+:trailing   =>  true,
+:debug      =>  true,
+:funcscope  =>  true,
+:browser    =>  true,
+:dojo       =>  true
+```
 
 For more on JSHint, see [the options documentation](http://www.jshint.com/options/).
 
