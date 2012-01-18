@@ -96,7 +96,11 @@ a single line.
 `if` statements for exiting functions early are an exception, and can be
 written on one line:
 
-    if (foo===true) { return; }
+    function(foo) {
+      if (foo===true) { return; }
+    
+      /* other function code */
+    }
 
 ## Ternaries
 
