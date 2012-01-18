@@ -93,6 +93,11 @@ a single line.
       return false;
     }
 
+`if` statements for exiting functions early are an exception, and can be
+written on one line:
+
+    if (foo===true) { return; }
+
 ## Ternaries
 
 The ternary operator can be very useful for variable assignment. However,
