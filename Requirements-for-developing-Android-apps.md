@@ -21,11 +21,7 @@ To build and run apps on Android Simulator, you must:
 
 	  `android`
 
-- Click "Available packages"
-
-- Expand "Android Repository"
-
-  You should install:
+  You should install/upgrade:
 
   - "Android SDK Tools" (latest revision)
   - "Android SDK Platform-tools" (latest revision)
