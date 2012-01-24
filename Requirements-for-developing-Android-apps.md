@@ -11,7 +11,7 @@ To build and run apps on Android Simulator, you must:
   `/Developer/SDKs/android-sdk-mac_x86/`. If you do not place it in this
   directory, Mulberry _should_ detect the location of it, but no guarantees.
 
-- Edit your shell's loading files (`~/.bashrc` or `~/.bash\_profile` for bash and
+- Edit your shell's loading files (`~/.bashrc` or `~/.bash_profile` for bash and
    `~/.zshrc` for zsh) and add the Android SDK platform tools to your path. For
    example:
 
