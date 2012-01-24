@@ -36,9 +36,6 @@ To build and run apps on Android Simulator, you must:
     - SDK Platform
     - Google APIs by Google Inc.
 
-- You do not need, but may choose, to install the Samples and Documentation.
-  It's pretty useless and just takes up space.
-
 ## Creating an Android Virtual Device
 
 If you do not have access to an Android device, you may want to create a
