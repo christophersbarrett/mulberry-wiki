@@ -23,20 +23,18 @@ To build and run apps on Android Simulator, you must:
 
   You should install/upgrade:
 
-  - "Android SDK Tools" (latest revision)
-  - "Android SDK Platform-tools" (latest revision)
-  - SDK Platform Android 2.2, 2.3.x, 2.n (up to latest revision)
+  - "Tools"
+    - "Android SDK Tools" (latest revision)
+    - "Android SDK Platform-tools" (latest revision)
+  - Android 2.2, 2.3.x, 2.n (up to latest 2.x revision)
+    - SDK Platform
+    - Google APIs by Google Inc.
   - SDK Platform Android 3.x (if you want to play with Android tablet)
+    - SDK Platform
+    - Google APIs by Google Inc.
   - SDK Platform Android 4.x (if you want to play with Ice Cream Sandwich, although this is not officially supported by Mulberry)
-
-  Expand "Third party Add-ons", then install:
-
-  - Google APIs 8, 9 (up to latest revision)
-
-  Be careful, as some tools require certain revisions, so if you see
-  "Skipping 'X'; it depends on 'Y'" you'll have to go back and choose X again.
-
-  Keep doing this until you've installed everything.
+    - SDK Platform
+    - Google APIs by Google Inc.
 
 - You do not need, but may choose, to install the Samples and Documentation.
   It's pretty useless and just takes up space.
