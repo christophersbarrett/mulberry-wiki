@@ -30,7 +30,8 @@ To build and run apps on Android Simulator, you must:
   - "Android SDK Tools" (latest revision)
   - "Android SDK Platform-tools" (latest revision)
   - SDK Platform Android 2.2, 2.3.x, 2.n (up to latest revision)
-  - SDK Platform Android 3.x
+  - SDK Platform Android 3.x (if you want to play with Android tablet)
+  - SDK Platform Android 4.x (if you want to play with Ice Cream Sandwich, although this is not officially supported by Mulberry)
 
   Expand "Third party Add-ons", then install:
 
