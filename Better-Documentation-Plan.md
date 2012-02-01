@@ -1,8 +1,10 @@
-In order to make the documentation task more manageable, we should break topics up into a three groups:
+In order to make the documentation task more manageable, we should break up information into a three groups:
 
 * **Core:** Concepts universal to all Mulberry apps. Includes:
  * Topic Guides
  * JS API Reference
+  * JS Objects
+  * Pub/Sub topics 
  * Command line reference
 * **Toura (possibly useful):** Specific components in the Toura base app that might be useful. Includes:
  * JS API Reference
@@ -12,6 +14,26 @@ In order to make the documentation task more manageable, we should break topics 
 
 ## JS
 
+    _View
+    _Component
+    components.buttons._Button
+    containers._LayoutBox (rename to _Container)
+    containers.Page
+    containers.Screen
+    containers.Region
+    _Model
+    models/
+      _StorableAsset
+      _Updateable
+    _Capability
+    _PageDef
+    toura.* 
+    ui/
+      BackgroundImage -> Image? SafeImage?
+      Scrollable
+    _Logging
+    _Nls
+    _Store
     app/
       Config
       Data
@@ -33,18 +55,7 @@ In order to make the documentation task more manageable, we should break topics 
       Routes
       UI
       URL
-    components/
-      buttons/
-        _Button
-    containers/
-      _LayoutBox -> _Container
-      Page
-      Region
-      Screen
-      Viewport
-    models/
-      _StorableAsset
-      _Updateable
+
     style/
       _debug-tools
         debug
@@ -52,25 +63,8 @@ In order to make the documentation task more manageable, we should break topics 
         icon
         hideable
       _layout
-    ui/
-      BackgroundImage -> Image? SafeImage?
-      Scrollable
-    _Capability
-    _Component
-    _Logging
-    _Model
-    _Nls
-    _PageDef
-    _Store
-    _View
-    Utilities
 
-    vendor
-      haml
-      iscroll
-      urbanairship
-
-## Core Topics
+## Core Pub/Sub Topics
 
     '/app/ready'
     '/app/deviceready'
