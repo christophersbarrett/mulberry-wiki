@@ -20,12 +20,19 @@ These will step through each concept demonstrating the use of the CLI, then delv
 * Getting Started 
  * Installation
  * Scaffolding
+ * The Server
 * Do Stuff
  * Components
  * Models
  * Page Definitions
  * Capabilities
  * Routes
+* Deploy It
+ * Install XCode
+ * Install Android SDK
+ * Using the iOS Simulator
+ * Using Weinre
+ * Build and Install in Simulator or Device
 
 # Core Reference Outline
 
