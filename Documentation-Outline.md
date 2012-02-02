@@ -1,20 +1,23 @@
-* **Core:** Concepts universal to all Mulberry apps. Includes:
- * Topic Guides: These will step through each concept demonstrating the use of the CLI, then delving into the relevant JavaScript 
+I suggest we break up information about Mulberry into three categories:
+
+* **Core:** Concepts universal to all Mulberry apps. 
+* **Toura (possibly useful):** Specific components in the Toura base app that might be useful
+* **Toura (probably not useful):** Aspects of the Toura base app that will be left undocumented because they are specific to the Toura problem domain
+
+# Core Topics
+
+These will step through each concept demonstrating the use of the CLI, then delving into the relevant JavaScript 
+
    * Routes
    * Page Definitions (including screens and regions)
    * Components
    * Capabilities
- * JS API Reference (fully enumerated below)
-  * JS Objects
-  * Pub/Sub topics
- * Command line reference
-* **Toura (possibly useful):** Specific components in the Toura base app that might be useful. Includes:
- * JS API Reference
-* **Toura (probably not useful):** Aspects of the Toura base app that will be left undocumented because they are specific to the Toura problem domain
 
-# Core
+# Core Reference Outline
 
 ## JS
+
+This is (somewhat) in order of importance
 
     _View
     _Component
@@ -132,7 +135,7 @@ Toura Base App Topics
     '/favorite/remove', [ id ]
     '/share', [ topic, [ n ]
 
-# Toura Base App (Completely Uninteresting)
+# Toura Base App (not worth documenting)
    all existing page_defs
    all existing capabilities
 
