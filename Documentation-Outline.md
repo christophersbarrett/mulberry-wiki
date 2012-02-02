@@ -1,4 +1,3 @@
-In order to make the documentation task more manageable, we should break up information into a three groups:
 
 * **Core:** Concepts universal to all Mulberry apps. Includes:
  * Topic Guides
@@ -130,34 +129,14 @@ Toura Base App Topics
     '/favorite/remove', [ id ]
     '/share', [ topic, [ n ]
 
-
 # Toura Base App (Completely Uninteresting)
+   all existing page_defs
+   all existing capabilities
 
-    page_defs/
-      audio-with-images-phone
-      audio-with-images-tablet
-      debug
-      default
-      favorites
-      feed-item
-      feed-list-phone
-      feed-list-tablet
-      full-screen-images
-      google-map-phone
-      google-map-tablet
-      grid-view
-      home-phone
-      home-tablet
-      home-with-header-phone
-      home-with-header-tablet
-      hotspots
-      images-and-text-phone
-      images-and-text-tablet
-      location-list
-      node-gallery
-      search
-      videos-and-text-phone
-      videos-and-text-tablet
+
+
+
+
 
 
 
