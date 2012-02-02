@@ -1,8 +1,17 @@
 I suggest we break up information about Mulberry into three categories:
 
 * **Core:** Concepts universal to all Mulberry apps. 
-* **Toura (possibly useful):** Specific components in the Toura base app that might be useful
+* **Toura (possibly useful):** Specific components and features in the Toura base app that might be useful
 * **Toura (probably not useful):** Aspects of the Toura base app that will be left undocumented because they are specific to the Toura problem domain
+
+There are a few other items that are currently not well documented but may have value for users depending on their requirements. They don't necessarily apply to all apps, but they're not necessarily Toura-specific:
+
+* Internationalization
+* Search
+* Favorites
+* Text resizing
+* Feature flags
+* DevConfig
 
 # Core Topics
 
@@ -94,7 +103,8 @@ This is (somewhat) in order of importance
     test
     update_themes
 
-# Toura Base App (Possibly Useful)
+# Toura Base App Topics (Possibly Useful)
+
 * means I think it's more likely that it's useful, usually because it's solving something that's tricky in a mobile app or dealing with PhoneGap quirks
 
     components/
