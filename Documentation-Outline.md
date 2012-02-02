@@ -28,17 +28,14 @@ These will step through each concept demonstrating the use of the CLI, then delv
 
 This is (somewhat) in order of importance
 
-    _View
     _Component
     components.buttons._Button
-    containers._LayoutBox (rename to _Container)
-    containers.Page
-    containers.Screen
-    containers.Region
+    containers
+      _LayoutBox (rename to _Container)
+      Page
+      Screen
+      Region
     _Model
-    models/
-      _StorableAsset
-      _Updateable
     _Capability
     _PageDef
     toura.* 
@@ -53,7 +50,6 @@ This is (somewhat) in order of importance
       Data
       DeviceStorage
       Has
-      Notifications
       PhoneGap
         accelerometer
         analytics
@@ -66,9 +62,8 @@ This is (somewhat) in order of importance
         notification
         push
       Router
-      Routes
       UI
-      URL
+      URL -> maybe?
 
     style/
       _debug-tools
