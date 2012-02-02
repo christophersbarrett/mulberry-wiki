@@ -105,7 +105,7 @@ This is (somewhat) in order of importance
 
 # Toura Base App Topics (Possibly Useful)
 
-* means I think it's more likely that it's useful, usually because it's solving something that's tricky in a mobile app or dealing with PhoneGap quirks
+\* means I think it's more likely that it's useful, usually because it's solving something that's tricky in a mobile app or dealing with PhoneGap quirks
 
     components/
       _ImageGallery *
