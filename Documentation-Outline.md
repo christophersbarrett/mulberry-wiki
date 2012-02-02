@@ -1,9 +1,12 @@
-
 * **Core:** Concepts universal to all Mulberry apps. Includes:
- * Topic Guides
- * JS API Reference
+ * Topic Guides: These will step through each concept demonstrating the use of the CLI, then delving into the relevant JavaScript 
+   * Routes
+   * Page Definitions (including screens and regions)
+   * Components
+   * Capabilities
+ * JS API Reference (fully enumerated below)
   * JS Objects
-  * Pub/Sub topics 
+  * Pub/Sub topics
  * Command line reference
 * **Toura (possibly useful):** Specific components in the Toura base app that might be useful. Includes:
  * JS API Reference
