@@ -18,15 +18,31 @@ There are a few other items that are currently not well documented but may have 
 These will step through each concept demonstrating the use of the CLI, then delving into the relevant JavaScript. They should each be written so that they can be followed as a step-by-step guide, or referred to randomly.
 
 * Getting Started 
- * Installation
- * Scaffolding
- * The Server
-* Do Stuff
- * Components
- * Models
- * Page Definitions
- * Capabilities
- * Routes
+    * Installation
+    * Scaffold an App
+    * Start the Server
+        * run multiple servers with -p
+* Make Stuff
+    * Components
+      * Create a component
+      * Put it in a page definition 
+          * **ugh, what's that?**
+      * Create a Haml or Mustache template
+          * Say "Hello World" 
+          * Say it With Style
+    * Use Real Data
+       * Create a Model
+       * Put some data in it
+       * Use it in your component
+    * Page Definitions
+       * Create another component
+       * Put them both in the same page
+       * Make them rows or columns
+       * Make them scroll
+    * Capabilities
+       * Make your components talk to each other
+    * Routes
+       * Make another page and navigate to it
 * Deploy It
  * Install XCode
  * Install Android SDK
@@ -149,14 +165,5 @@ Toura Base App Topics
     '/share', [ topic, [ n ]
 
 # Toura Base App (not worth documenting)
-   all existing page_defs
-   all existing capabilities
-
-
-
-
-
-
-
-
-
+   * all existing page_defs
+   * all existing capabilities
