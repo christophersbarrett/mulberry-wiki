@@ -15,12 +15,17 @@ There are a few other items that are currently not well documented but may have 
 
 # Core Topics
 
-These will step through each concept demonstrating the use of the CLI, then delving into the relevant JavaScript 
+These will step through each concept demonstrating the use of the CLI, then delving into the relevant JavaScript. They should each be written so that they can be followed as a step-by-step guide, or referred to randomly.
 
-   * Routes
-   * Page Definitions (including screens and regions)
-   * Components
-   * Capabilities
+* Getting Started 
+ * Installation
+ * Scaffolding
+* Do Stuff
+ * Components
+ * Models
+ * Page Definitions
+ * Capabilities
+ * Routes
 
 # Core Reference Outline
 
