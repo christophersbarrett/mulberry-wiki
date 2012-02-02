@@ -95,12 +95,8 @@ This is (somewhat) in order of importance
     update_themes
 
 # Toura Base App (Possibly Useful)
+* means I think it's more likely that it's useful, usually because it's solving something that's tricky in a mobile app or dealing with PhoneGap quirks
 
-    app/
-      user/
-        Facebook
-        Favorites
-        Twitter
     components/
       _ImageGallery *
       _ImageScroller *
@@ -119,7 +115,7 @@ This is (somewhat) in order of importance
       SearchResults
       SiblingNav
       VideoPlayer *
-      ZoomableImageGallery
+      ZoomableImageGallery *
       buttons/
         BackButton.js
         DeleteButton.js
