@@ -56,7 +56,9 @@ These will step through each concept demonstrating the use of the CLI, then delv
 
 This is (somewhat) in order of importance
 
-    _Component
+    mulberry.component
+    mulberry.route
+    mulberry.store
     components.buttons._Button
     containers
       _LayoutBox (rename to _Container)
@@ -72,10 +74,10 @@ This is (somewhat) in order of importance
       Scrollable
     _Logging
     _Nls
-    _Store
     app/
       Config
       Data
+      Device
       DeviceStorage
       Has
       PhoneGap
