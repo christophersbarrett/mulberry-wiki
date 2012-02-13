@@ -41,7 +41,7 @@ The following commands create code that can be used as the basis for adding cust
 Create a file at `page_defs/<name>.yml`, which you can populate with information about the layout, components, and capabilities to be used on a page. [Read more about page definitions](https://github.com/Toura/mulberry/wiki/Page-Definitions).
 
 ### mulberry create component \<name\>
-Create a file at `javascript/components/<name>.js`, along with supporting Haml and CSS files for the component. [Read more about components](https://github.com/Toura/mulberry/wiki/Components)
+Create a file at `javascript/components/<name>.js`, along with supporting Haml and CSS files for the component. [Read more about components](https://github.com/Toura/mulberry/wiki/Components).
 
 ### mulberry create capability \<name\>
 Create a file at `javascript/capabilities/<name>.js`, which you can populate with information about how components should interact on a given page. [Read more about capabilities](https://github.com/Toura/mulberry/wiki/Capabilities).
