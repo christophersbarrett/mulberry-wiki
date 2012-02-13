@@ -17,7 +17,7 @@ To build and run apps on Android Simulator, you must:
 
 	  `export PATH=$PATH:/Developer/SDKs/android-sdk-mac_x86/tools:/Developer/SDKs/android-sdk-mac_x86/platform-tools`
 
-- Open a new teminal and run the SDK manager:
+- Open a new terminal and run the SDK manager:
 
 	  `android`
 
