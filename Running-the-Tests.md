@@ -7,9 +7,11 @@ To keep regular installation time and hassle to a minimum, the install script do
 
 If all you see is something like this:
 
-> \---
->
-> BUNDLE_WITHOUT: test
+```
+\---
+
+BUNDLE_WITHOUT: test
+```
 
 You can safely delete the file, e.g.
 
