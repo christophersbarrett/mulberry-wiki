@@ -21,6 +21,14 @@ If there are other items in your .bundle/config, delete just the `BUNDLE_WITHOUT
 
 Now you can run: `bundle install` and it will install the test libraries.
 
+## Installing chromedriver
+
+You will need chromedriver in order to run the JavaScript tests. You can
+[download chromedriver](http://code.google.com/p/chromium/downloads/list)
+if you do not already have it installed; make sure you install it somewhere in your $PATH.
+
+This is automatically installed for you by the OSX installer, other platforms will need to install it by hand.
+
 ## Running the Tests
 
 In the Mulberry installation directory, simply type:
@@ -35,11 +43,3 @@ You can also run individual suites:
     rake evergreen:run    # run the javascript unit tests
     rake evergreen:serve  # serve the javascript tests for manual testing
     rake jshint           # run jshint on the js code and js tests
-
-## Installing chromedriver
-
-You will need chromedriver in order to run the JavaScript tests. You can
-[download chromedriver](http://code.google.com/p/chromium/downloads/list)
-if you do not already have it installed; make sure you install it somewhere in your $PATH.
-
-This is automatically installed for you by the OSX installer, other platforms will need to install it by hand.
