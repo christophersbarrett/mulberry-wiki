@@ -8,8 +8,13 @@
 * The pattern for the command line commands has changed; see [[Command Line Interface]]
 
 ## From 0.2 to 0.3:
-
-* Theming changes: To get the changes, run `mulberry update_themes` and resolve any conflicts manually 
+* The command line utility has moved from `/mulberry/bin/mulberry` to `/cli/bin/mulberry`. Update your $PATH to the new location.
+* Upgrade to PhoneGap 1.3
+  * If you're developing for iOS, download [PhoneGap](http://phonegap.com/download/) and run the iOS installer
+* `templates` are now called `page_defs`
+  * Rename the `templates` directory to `page_defs`
+  * In all your page markdown files, change `template` to `page_def`
+* Theming changes: To get the changes, run `mulberry update_themes` and resolve any conflicts manually
   * Icons have been moved to `themes/default/resources/icons`. 
   * All colors have been extracted to `themes/default/_settings.scss`
   * Instead of defining layout in page_def yaml files, use mixins in page_def scss files

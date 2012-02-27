@@ -25,6 +25,7 @@
 - [[Versioning Philosophy and Commitment]]
 - [[0.1.1 Release Notes]]
 - [[0.2 Release Notes]]
+- [[0.3 Release Notes]]
 - [[0.next Release Notes]] (These are changes that are on master; they may or may not be incorporated into the next release.)
 - [[Upgrading]]
 
@@ -34,3 +35,5 @@ These are resources for people who want to contribute to the Mulberry project.
 
 - [[Upgrading to new PhoneGap versions]]
 - [[Release Checklist]]
+- [[JavaScript Coding Guidelines]]
+- [[Ruby Coding Guidelines]]

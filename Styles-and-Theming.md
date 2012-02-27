@@ -24,7 +24,7 @@ You can probably figure out how to style what you want by looking through the We
 
 ### Pages, Screens, Regions and Components
 
-These are the building blocks of a Mulberry app. You’ve already seen references to them in the page definitions, but here’s what it means for styling. Mulberry takes a page definition and constructs consistent markup with helpful hooks for styling whichever part of your app you need to. For instance the page definition classname gets added to the page’s root element, so if you want to apply a style to pages with that page definition, it’s no problem:
+These are the building blocks of a Mulberry app. You’ve already seen references to them in the [[page definitions]], but here’s what it means for styling. Mulberry takes a page definition and constructs consistent markup with helpful hooks for styling whichever part of your app you need to. For instance the page definition classname gets added to the page’s root element, so if you want to apply a style to pages with that page definition, it’s no problem:
 
     .page.my-page-def {
       color: green;
@@ -60,7 +60,7 @@ And lastly there are regions, which can be selected either based on the classNam
       }
     }
 
-### Screen Layout
+### <a id="layout-mixins"></a>Screen Layout
 
 Usually, you'll need to lay out your regions in columns and rows, so Mulberry provides a few Sass mixins to handle this in a reliable way. They use the [flexible box model](http://www.the-haystack.com/2010/01/23/css3-flexbox-part-1/).
 
@@ -68,6 +68,30 @@ Usually, you'll need to lay out your regions in columns and rows, so Mulberry pr
   * `flex-column-container`: Defines a region as a flex-box container with child regions as columns.
   * `flex-region(<proportion>)`: Used for child elements of `flex-row-container` and `flex-column-container`, but allows you to specify the proportion of space the region should take up.
   * `fixed-flex-region`: Defines fixed-size region within a flex-box container.
+
+Here's how they might be used to create a screen with a fixed-size header, with some columns underneath:
+
+    .page.my-page-def {
+      color: green;
+
+      .screen.index {
+        @include flex-row-container;
+        background-color: orange;
+
+        .region.header {
+          @include fixed-flex-region;
+          height: 60px;
+        }
+
+        > .region.nth-child(2) {
+          @include flex-column-container;
+
+          > .region:first-child {
+            width: 200px;
+          }
+        }
+      }
+    }
 
 ### Components
 You probably don’t want to put too many styles for your components within the page definition styles, because you want the component styles to be reused no matter what page it’s placed in. So component styles are best handled separately, although the conventions are similar. Say we want to style the ImageGallery component.

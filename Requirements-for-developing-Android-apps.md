@@ -11,38 +11,32 @@ To build and run apps on Android Simulator, you must:
   `/Developer/SDKs/android-sdk-mac_x86/`. If you do not place it in this
   directory, Mulberry _should_ detect the location of it, but no guarantees.
 
-- Edit your shell's loading files (`~/.bashrc` or `~/.bash\_profile` for bash and
+- Edit your shell's loading files (`~/.bashrc` or `~/.bash_profile` for bash and
    `~/.zshrc` for zsh) and add the Android SDK platform tools to your path. For
    example:
 
 	  `export PATH=$PATH:/Developer/SDKs/android-sdk-mac_x86/tools:/Developer/SDKs/android-sdk-mac_x86/platform-tools`
 
-- Open a new teminal and run the SDK manager:
+- Open a new terminal and run the SDK manager:
 
 	  `android`
 
-- Click "Available packages"
+  You should install/upgrade:
 
-- Expand "Android Repository"
+  - "Tools"
+    - "Android SDK Tools" (latest revision)
+    - "Android SDK Platform-tools" (latest revision)
+  - Android 2.2, 2.3.x, 2.n (up to latest 2.x revision)
+    - SDK Platform
+    - Google APIs by Google Inc.
+  - SDK Platform Android 3.x (if you want to play with Android tablet)
+    - SDK Platform
+    - Google APIs by Google Inc.
+  - SDK Platform Android 4.x (if you want to play with Ice Cream Sandwich, although this is not officially supported by Mulberry)
+    - SDK Platform
+    - Google APIs by Google Inc.
 
-  You should install:
-
-  - "Android SDK Tools" (latest revision)
-  - "Android SDK Platform-tools" (latest revision)
-  - SDK Platform Android 2.2, 2.3.x, 2.n (up to latest revision)
-  - SDK Platform Android 3.x
-
-  Expand "Third party Add-ons", then install:
-
-  - Google APIs 8, 9 (up to latest revision)
-
-  Be careful, as some tools require certain revisions, so if you see
-  "Skipping 'X'; it depends on 'Y'" you'll have to go back and choose X again.
-
-  Keep doing this until you've installed everything.
-
-- You do not need, but may choose, to install the Samples and Documentation.
-  It's pretty useless and just takes up space.
+It should look [something like this](images/androidsdk.png).
 
 ## Creating an Android Virtual Device
 

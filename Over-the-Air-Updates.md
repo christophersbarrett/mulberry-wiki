@@ -3,7 +3,7 @@
 OTA (Over The Air) updates allow you to update the content of your application
 without submitting a new version of your app to the app store. With an OTA
 update you can change the text on pages, add new assets, even change the
-sitemap for your application -- all without having to wait for app your to be
+sitemap for your application -- all without having to wait for your app to be
 approved before users can receive it.
 
 To help you get a big picture understanding of how OTA's work, and the
@@ -93,14 +93,14 @@ receive the content update before the app store version of the app is ready
 (Devices A and B). Device A above gets the OTA, but for whatever reason does
 not install the app store update; it still gets the benefit of the new content.
 Device C, though it was OTA-enabled, did not get the OTA for whatever reason
-(maybe the user just never used it during the time period between between app
+(maybe the user just never used it during the time period between the app
 store submission and approval), but still gets the content update bundled along
 with the new app store version when it installs it.
 
 **Note: The OTA does not distribute JavaScript source code, only content. If
 the nature of the change to your app's content is such that only the newer
 version of the source code is able to process it without breaking, then the
-receivers of the this OTA (Devices A and B) could be stuck for weeks with a
+receivers of the OTA (Devices A and B) could be stuck for weeks with a
 broken app and no way to fix it.**
 
 ## OTA with Existing App, Publish on Approval
