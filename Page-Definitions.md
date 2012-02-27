@@ -1,9 +1,6 @@
-Each page in a Mulberry application is displayed using a **page_def**. Keep in
-mind that this is different than a **page**. A **page** is a markdown file
-which contains your content for the page. A **page_def** defines what Mulberry
-will do with that content. There are lots of built in page_defs that you can
+Each page in a Mulberry application is displayed using a **Page Definition** (or as used in the code: **page_def**) which defines what components will be used to render the page and how they will interact. Mulberry comes with a set of built in page_defs that you can
 use, or you can create your own. To specify a page_def for a page, add a
-page_def property to the page's YAML header:
+`page_def` property to the page's YAML header:
 
     ---
     title: My Page
@@ -39,7 +36,7 @@ You can specify your own page_defs using a simple YAML structure. Your
 page_defs can use Mulberry's built-in components and capabilities, or you can create
 your own custom components and capabilities.
 
-Mulberry can create the YAML skeleton for a new page_def (page_def to save you some typing) for you:
+Mulberry can create the YAML skeleton for a new page_def for you:
 
     mulberry create page_def my-pagedef
 
@@ -67,7 +64,7 @@ This is best explained with an example:
                 - PageHeaderImage
                 - BodyText
 
-Each page_def has it's  own scss file in the `themes/<theme name>/page_defs` directory where you handle the page layout. Mulberry provides a few helpful Sass mixins to handle common row/column layouts:
+Each page_def has it's own scss file in the `themes/<theme name>/page_defs` directory where you handle the page layout. Mulberry provides a few helpful Sass mixins to handle common row/column layouts:
 
     .page.my-pagedef {
       .screen.index {
@@ -140,11 +137,56 @@ list of videos plays the video in a video player. If a video has an
 associated caption, the caption will be displayed when the audio is selected.
 Also displays the page text and links to subpages, if any.
 
+## Multiple screens
+
+A page_def may contain multiple **screens** that each provide a different layout
+of regions.  Since these screens are contained within the same page_def they may
+have tightly integrated behavior between their components.
+
+    product:
+      screens:
+        - name: show
+          regions:
+            - scrollable: true
+              components:
+                - ProductImage
+                - ProductDetails
+        - name: edit
+          regions:
+            - components:
+                - ProductEditor
+
+In this example, there is a `show` product screen that displays a given product.
+There is also an `edit` product screen that allows the user to edit the same
+product.  It might be nice to automatically update the show screen to reflect
+any changes made on the edit screen.  Since these screens are a part of the same
+page def, they may be linked together using a **capability**.  (Please see the
+[[Capabilities]] page for details.)
+
+To switch between multiple screens, call a page's showScreen() method in a
+capability as follows:
+
+    dojo.provide('client.capabilities.Products');
+
+    mulberry.capability('Products', {
+      requirements : {
+      },
+
+      connects : [
+      ],
+
+      init : function() {
+        this.page.showScreen('index');
+      }
+    });
+
+The show screen method will show the given screen and hide all others.  Note
+that if this method is never called then all screens will be shown
+simultaneously, layered on top of one another.
 
 TODOC: subregions
 
 TODOC: capabilities
 
-TODOC: multiple screens
-
 TODOC: region properties (scrollable, size, etc.)
+
