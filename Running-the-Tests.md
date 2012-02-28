@@ -21,6 +21,14 @@ If there are other items in your .bundle/config, delete just the `BUNDLE_WITHOUT
 
 Now you can run: `bundle install` and it will install the test libraries.
 
+## Setting up .rvmrc
+
+The installation script downloads and installs rvm and creates a gemset to store all of our gems. The mulberry command line interface will load this gemset automatically, but `rake` and other ruby scripts won't. In order to run `rake`, you must create a .rvmrc file in your mulberry root directory that contains the following:
+
+`rvm use 1.9.3@mulberry`
+
+Note this will introduce a harmless warning message "RVM is not a function" when running mulberry commands within the mulberry repo (say, running `mulberry serve` for one of the demo apps).
+
 ## Installing chromedriver
 
 You will need chromedriver in order to run the JavaScript tests. You can
