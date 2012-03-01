@@ -11,7 +11,7 @@ To build and run apps on Android Simulator, you must:
    `~/.zshrc` for zsh) and add the Android SDK platform tools to your path. For
    example:
 
-	  `export PATH=$PATH:/Developer/SDKs/android-sdk-mac_x86/tools:/Developer/SDKs/android-sdk-mac_x86/platform-tools`
+	  `export PATH=$PATH:/home/yourname/android-sdk/tools:/home/yourname/android-sdk/platform-tools`
 
 - Open a new terminal and run the SDK manager:
 
