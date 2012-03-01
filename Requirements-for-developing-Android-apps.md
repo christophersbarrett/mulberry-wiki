@@ -52,6 +52,16 @@ virtual device for testing. To do this, run the SDK manager by running
 
 Now you can run the device by running `emulator @your-device-name -partition-size 128`
 
+If you receive an error like:
+
+`emulator: ERROR: unknown skin name`
+
+You must edit your .bash_profile (or .profile, etc.) to create an environment variable:
+
+`export ANDROID_SDK_ROOT=/usr/local/Cellar/android-sdk/r16/`
+
+Note this path is specific to your installation of the android SDK. If you are on OS X, it should be similar to that (although r16 may be r17, 18, etc. as the version increases). If you are on another platform, the path is up to you.
+
 To rotate the device hit 7 or 9 on your numeric keypad. If you don't have one:
 CTRL-F12 to rotate to landscape, CTRL-F11 to rotate back.
 
