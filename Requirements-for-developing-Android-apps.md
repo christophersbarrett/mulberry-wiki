@@ -7,10 +7,6 @@ To build and run apps on Android Simulator, you must:
 - Download [Android SDK package](http://developer.android.com/sdk/index.html)
   for your platform. If you've run the OSX installation script, the Android SDK is installed for you via homebrew.
 
-- If you did not run the installation script and wish to install Android SDK on your own, the preferred location for the SDK is
-  `/Developer/SDKs/android-sdk-mac_x86/`. If you do not place it in this
-  directory, Mulberry _should_ detect the location of it, but no guarantees.
-
 - Edit your shell's loading files (`~/.bashrc` or `~/.bash_profile` for bash and
    `~/.zshrc` for zsh) and add the Android SDK platform tools to your path. For
    example:
